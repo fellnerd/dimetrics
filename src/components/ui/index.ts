@@ -5,12 +5,12 @@ export {
   HighlightedText,
 } from "./typography/section-description";
 
+// Button Components
+export { PremiumButton } from "./buttons/premium-button";
+
 // Decoration Components
 export { FloatingDecorations } from "./decorations/floating-decorations";
 export { AccentLine } from "./decorations/accent-line";
-
-// Button Components
-export { PremiumButton } from "./buttons/premium-button";
 
 // Badge Components
 export { CategoryBadge } from "./badges/category-badge";

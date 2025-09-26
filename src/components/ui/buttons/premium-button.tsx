@@ -19,39 +19,46 @@ export function PremiumButton({
   href,
   onClick,
   variant = "primary",
-  size = "lg",
+  size = "md",
   showArrow = true,
   className = "",
   disabled = false,
 }: PremiumButtonProps) {
   const variants = {
     primary:
-      "bg-gradient-to-r from-[#3d55e2] to-[#5facdb] hover:from-[#5facdb] hover:to-[#A100FF] text-white shadow-2xl hover:shadow-[#5facdb]/25",
+      "bg-gradient-to-r from-[#3d55e2] to-[#5facdb] hover:from-[#5facdb] hover:to-[#A100FF] text-white hover:!text-white shadow-lg hover:shadow-[#5facdb]/20",
     secondary:
-      "bg-gradient-to-r from-[#A100FF] to-[#3d55e2] hover:from-[#3d55e2] hover:to-[#A100FF] text-white shadow-xl",
+      "bg-gradient-to-r from-[#A100FF] to-[#3d55e2] hover:from-[#3d55e2] hover:to-[#A100FF] text-white hover:!text-white shadow-xl hover:shadow-[#A100FF]/20",
     ghost:
-      "border-2 border-[#5facdb] text-[#5facdb] hover:bg-[#5facdb] hover:text-white",
+      "border-2 border-[#5facdb] text-[#5facdb] hover:bg-[#5facdb] hover:!text-white",
   };
 
   const sizes = {
-    sm: "px-6 py-3 text-sm rounded-lg",
-    md: "px-8 py-4 text-base rounded-xl",
-    lg: "px-10 py-5 text-lg rounded-xl",
-    xl: "px-12 py-6 text-xl rounded-2xl",
+    sm: "px-4 py-2 text-sm rounded-lg gap-1",
+    md: "px-6 py-3 text-base rounded-xl gap-2",
+    lg: "px-8 py-4 text-lg rounded-xl gap-2",
+    xl: "px-10 py-5 text-xl rounded-2xl gap-3",
   };
 
-  const baseClasses = `group relative inline-flex items-center font-semibold transition-all duration-500 transform hover:scale-105 overflow-hidden ${variants[variant]} ${sizes[size]} ${className}`;
+  const iconSizes = {
+    sm: "w-3 h-3",
+    md: "w-4 h-4",
+    lg: "w-5 h-5",
+    xl: "w-6 h-6",
+  };
+
+  const baseClasses = `group inline-flex items-center font-medium transition-all duration-300 hover:scale-105 ${variants[variant]} ${sizes[size]} ${className}`;
 
   const content = (
     <>
-      {/* Shine Effect */}
-      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -skew-x-12 translate-x-[-100%] group-hover:translate-x-[200%] transition-transform duration-1000"></div>
-      <span className="relative flex items-center gap-2">
+      <span className="relative text-white group-hover:!text-white">
         {children}
-        {showArrow && (
-          <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-        )}
       </span>
+      {showArrow && (
+        <ArrowRight
+          className={`${iconSizes[size]} text-white group-hover:!text-white group-hover:translate-x-1 transition-transform duration-300`}
+        />
+      )}
     </>
   );
 
@@ -62,6 +69,7 @@ export function PremiumButton({
         className={baseClasses}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
+        onClick={onClick}
       >
         {content}
       </motion.a>
@@ -70,11 +78,11 @@ export function PremiumButton({
 
   return (
     <motion.button
-      onClick={onClick}
       className={baseClasses}
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
+      onClick={onClick}
       disabled={disabled}
-      whileHover={{ scale: disabled ? 1 : 1.05 }}
-      whileTap={{ scale: disabled ? 1 : 0.95 }}
     >
       {content}
     </motion.button>

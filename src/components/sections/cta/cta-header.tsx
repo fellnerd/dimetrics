@@ -29,9 +29,15 @@ export function CTAHeader({
       viewport={{ once: true }}
       className="space-y-8 text-center"
     >
-      <h2 className="text-5xl lg:text-6xl font-light text-white leading-none">
-        {title} <span className="text-accenture-purple">{highlightText}</span>
-      </h2>
+      <h3 className="text-4xl lg:text-5xl font-bold mb-8">
+        <span className="bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent">
+          Bereit für Ihre
+        </span>
+        <br />
+        <span className="bg-gradient-to-r from-[#3d55e2] via-[#5facdb] to-[#A100FF] bg-clip-text text-transparent">
+          digitale Transformation?
+        </span>
+      </h3>
       <SectionDescription className="text-gray-400 max-w-3xl mx-auto">
         {description}
       </SectionDescription>
