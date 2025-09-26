@@ -6,7 +6,6 @@ export {
 } from "./typography/section-description";
 
 // Button Components
-export { PremiumButton } from "./buttons/premium-button";
 
 // Decoration Components
 export { FloatingDecorations } from "./decorations/floating-decorations";
