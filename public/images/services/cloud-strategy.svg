@@ -1,0 +1,38 @@
+<svg width="400" height="300" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="400" height="300" rx="12" fill="#0a0a0a" stroke="#1a1a1a" stroke-width="2"/>
+  
+  <!-- Cloud illustration -->
+  <g transform="translate(100, 100)">
+    <!-- Main cloud shape -->
+    <ellipse cx="100" cy="60" rx="80" ry="30" fill="#A100FF" opacity="0.2"/>
+    <ellipse cx="80" cy="50" rx="60" ry="25" fill="#A100FF" opacity="0.15"/>
+    <ellipse cx="120" cy="45" rx="50" ry="20" fill="#A100FF" opacity="0.1"/>
+    
+    <!-- Connection lines to servers -->
+    <g stroke="#A100FF" stroke-width="2" opacity="0.4">
+      <line x1="50" y1="80" x2="30" y2="100"/>
+      <line x1="100" y1="85" x2="100" y2="110"/>
+      <line x1="150" y1="80" x2="170" y2="100"/>
+    </g>
+    
+    <!-- Server boxes -->
+    <rect x="20" y="100" width="20" height="15" rx="2" fill="#333" stroke="#A100FF"/>
+    <rect x="90" y="110" width="20" height="15" rx="2" fill="#333" stroke="#A100FF"/>
+    <rect x="160" y="100" width="20" height="15" rx="2" fill="#333" stroke="#A100FF"/>
+    
+    <!-- Data flow indicators -->
+    <circle cx="35" cy="90" r="2" fill="#A100FF">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="100" cy="95" r="2" fill="#A100FF">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="0.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="165" cy="90" r="2" fill="#A100FF">
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" begin="1s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+  
+  <text x="200" y="280" text-anchor="middle" fill="#666" font-family="Arial, sans-serif" font-size="14" font-weight="300">
+    Cloud Strategy & Migration
+  </text>
+</svg>
