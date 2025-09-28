@@ -3,14 +3,29 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 50);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <nav className="relative z-50 bg-black border-b border-gray-800">
-      <div className="max-w-7xl mx-auto px-6 py-4">
+    <nav
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isScrolled
+          ? "bg-gray-900/70 backdrop-blur-md border-b border-gray-800/60 py-1.5"
+          : "bg-gray-900/50 backdrop-blur-sm border-b border-gray-800/40 py-3"
+      }`}
+    >
+      <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <motion.div
@@ -22,9 +37,17 @@ export function Navigation() {
             <img
               src="/images/logos/dimetrics-logo.png"
               alt="Dimetrics"
-              className="w-8 h-8 object-contain"
+              className={`object-contain transition-all duration-300 ${
+                isScrolled ? "w-6 h-6" : "w-8 h-8"
+              }`}
             />
-            <span className="text-2xl font-light text-white">dimetrics</span>
+            <span
+              className={`font-light text-white transition-all duration-300 ${
+                isScrolled ? "text-sm" : "text-base"
+              }`}
+            >
+              dimetrics
+            </span>
           </motion.div>
 
           {/* Desktop Menu */}
@@ -36,34 +59,48 @@ export function Navigation() {
           >
             <a
               href="#services"
-              className="text-gray-300 hover:text-accenture-purple transition-colors font-light"
+              className={`text-gray-300 hover:text-white transition-all duration-300 font-light ${
+                isScrolled ? "text-sm" : "text-base"
+              }`}
             >
               Unsere Kompetenzen
             </a>
             <a
               href="#solutions"
-              className="text-gray-300 hover:text-accenture-purple transition-colors font-light"
+              className={`text-gray-300 hover:text-white transition-all duration-300 font-light ${
+                isScrolled ? "text-sm" : "text-base"
+              }`}
             >
               Lösungen
             </a>
             <a
               href="#about"
-              className="text-gray-300 hover:text-accenture-purple transition-colors font-light"
+              className={`text-gray-300 hover:text-white transition-all duration-300 font-light ${
+                isScrolled ? "text-sm" : "text-base"
+              }`}
             >
               Über Dimetrics
             </a>
             <a
               href="#contact"
-              className="text-gray-300 hover:text-accenture-purple transition-colors font-light"
+              className={`text-gray-300 hover:text-white transition-all duration-300 font-light ${
+                isScrolled ? "text-sm" : "text-base"
+              }`}
             >
               Kontakt
             </a>
-            <Button
-              className="bg-accenture-purple hover:bg-accenture-purple/90 text-white font-light"
-              size="sm"
-            >
-              Beratung vereinbaren
-            </Button>
+            {isScrolled ? (
+              <a
+                href="#contact"
+                className="text-gray-300 hover:text-white transition-all duration-300 font-light text-sm"
+              >
+                Beratung vereinbaren
+              </a>
+            ) : (
+              <Button className="bg-gradient-to-r from-[#3d55e2] to-[#5facdb] hover:from-[#5facdb] hover:to-[#A100FF] text-white font-light transition-all duration-300 text-base px-6 py-2">
+                Beratung vereinbaren
+              </Button>
+            )}
           </motion.div>
 
           {/* Mobile menu button */}

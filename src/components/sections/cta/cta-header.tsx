@@ -29,12 +29,11 @@ export function CTAHeader({
       viewport={{ once: true }}
       className="space-y-8 text-center"
     >
-      <h3 className="text-4xl lg:text-5xl font-bold mb-8">
-        <span className="bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent">
+      <h3 className="text-4xl lg:text-5xl font-bold mb-8 leading-tight">
+        <span className="block bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent">
           Bereit für Ihre
         </span>
-        <br />
-        <span className="bg-gradient-to-r from-[#3d55e2] via-[#5facdb] to-[#A100FF] bg-clip-text text-transparent">
+        <span className="block bg-gradient-to-r from-[#3d55e2] via-[#5facdb] to-[#A100FF] bg-clip-text text-transparent">
           digitale Transformation?
         </span>
       </h3>

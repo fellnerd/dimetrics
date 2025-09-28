@@ -27,7 +27,7 @@ export function SolutionCard({ solution, index }: SolutionCardProps) {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: index * 0.1 }}
       viewport={{ once: true }}
-      className={`grid lg:grid-cols-2 gap-16 items-center ${
+      className={`grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center ${
         index % 2 === 1 ? "lg:direction-rtl" : ""
       }`}
     >
@@ -35,14 +35,14 @@ export function SolutionCard({ solution, index }: SolutionCardProps) {
       <div className={`relative ${index % 2 === 1 ? "lg:order-2" : ""}`}>
         <div className="relative">
           {/* Static background gradient */}
-          <div className="absolute inset-0 bg-gradient-to-br from-[#3d55e2]/30 via-[#5facdb]/20 to-[#A100FF]/30 rounded-3xl blur-sm"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-[#3d55e2]/30 via-[#5facdb]/20 to-[#A100FF]/30 rounded-2xl sm:rounded-3xl blur-sm"></div>
 
-          <div className="relative aspect-[4/3] rounded-3xl overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-black border border-gray-700/50">
+          <div className="relative aspect-[4/3] rounded-2xl sm:rounded-3xl overflow-hidden bg-gradient-to-br from-gray-900 via-gray-800 to-black border border-gray-700/50">
             <Image
               src={solution.image}
               alt={solution.title}
               fill
-              className="object-contain p-6"
+              className="object-contain p-4 sm:p-6"
             />
 
             {/* Static overlay effects */}

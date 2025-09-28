@@ -60,7 +60,10 @@ export function ServicesSection() {
   ];
 
   return (
-    <section id="services" className="bg-white py-20 px-6">
+    <section
+      id="services"
+      className="bg-white py-12 sm:py-16 lg:py-20 px-4 sm:px-6"
+    >
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -76,7 +79,7 @@ export function ServicesSection() {
           />
 
           {/* Tab Content */}
-          <div className="relative min-h-[650px]">
+          <div className="relative min-h-[500px] sm:min-h-[600px] lg:min-h-[650px]">
             {services.map((service, index) => (
               <ServiceTabContent
                 key={service.title}

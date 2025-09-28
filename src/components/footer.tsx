@@ -1,10 +1,12 @@
 "use client";
 
 import Image from "next/image";
-import { Mail, Phone, MapPin, ArrowRight } from "lucide-react";
+import { Mail, Phone, MapPin, ArrowRight, Linkedin } from "lucide-react";
 import { PremiumButton } from "./ui/buttons/premium-button";
 
 export function Footer() {
+  const currentYear = new Date().getFullYear();
+
   const services = [
     { name: "Cloud Strategie & Beratung", href: "/services/cloud-strategy" },
     {
@@ -46,26 +48,35 @@ export function Footer() {
       {/* Main Content */}
       <div className="relative">
         {/* Newsletter/CTA Section */}
-        <div className="border-b border-gray-800 py-16">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div className="space-y-4">
-                <h3 className="text-3xl lg:text-4xl font-bold text-white leading-tight">
+        <div className="border-b border-gray-800 py-12 sm:py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+              <div className="space-y-4 text-center lg:text-left">
+                <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white leading-tight">
                   Bereit für Ihre digitale
                   <span className="block bg-gradient-to-r from-[#3d55e2] via-[#5facdb] to-[#A100FF] bg-clip-text text-transparent">
                     Transformation?
                   </span>
                 </h3>
-                <p className="text-xl text-gray-400 leading-relaxed">
+                <p className="text-base sm:text-lg lg:text-xl text-gray-400 leading-relaxed">
                   Lassen Sie uns gemeinsam Ihre Vision in die Realität umsetzen.
                   Vereinbaren Sie jetzt ein kostenloses Beratungsgespräch.
                 </p>
               </div>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <PremiumButton href="/kontakt" size="lg">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <PremiumButton
+                  href="/kontakt"
+                  size="md"
+                  className="w-full sm:w-auto"
+                >
                   Beratungsgespräch vereinbaren
                 </PremiumButton>
-                <PremiumButton href="/projekte" variant="ghost" size="lg">
+                <PremiumButton
+                  href="/projekte"
+                  variant="ghost"
+                  size="md"
+                  className="w-full sm:w-auto"
+                >
                   Projekte ansehen
                 </PremiumButton>
               </div>
@@ -74,49 +85,83 @@ export function Footer() {
         </div>
 
         {/* Main Footer Content */}
-        <div className="py-16">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-12">
+        <div className="py-12 sm:py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
               {/* Brand Section */}
-              <div className="lg:col-span-2 space-y-8">
+              <div className="sm:col-span-2 lg:col-span-1 space-y-6 lg:space-y-8">
                 <div className="space-y-4">
                   <Image
                     src="/images/logos/dimetrics-logo.png"
                     alt="Dimetrics Logo"
                     width={180}
                     height={40}
-                    className="h-10 w-auto"
+                    className="h-8 sm:h-10 w-auto"
                   />
-                  <p className="text-lg text-gray-300 leading-relaxed max-w-md">
+                  <p className="text-sm sm:text-base lg:text-lg text-gray-300 leading-relaxed max-w-md">
                     Digitale Transformation strategisch durchdacht und technisch
                     exzellent umgesetzt. Ihr Partner für nachhaltigen digitalen
                     Erfolg.
                   </p>
                 </div>
 
-                {/* Contact Info */}
-                <div className="space-y-4">
-                  <div className="flex items-center gap-3 text-gray-400">
-                    <MapPin className="w-5 h-5 text-[#5facdb]" />
-                    <span>Kärnten, Österreich</span>
-                  </div>
-                  <div className="flex items-center gap-3 text-gray-400">
-                    <Mail className="w-5 h-5 text-[#5facdb]" />
+                {/* LinkedIn & Partner Logos */}
+                <div className="space-y-6">
+                  {/* LinkedIn */}
+                  <div className="flex items-center gap-3">
                     <a
-                      href="mailto:office@dimetrics.io"
-                      className="hover:text-[#5facdb] transition-colors"
+                      href="https://www.linkedin.com/company/dimetrics"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-3 text-gray-400 hover:text-[#5facdb] transition-colors group"
                     >
-                      office@dimetrics.io
+                      <Linkedin className="w-6 h-6 text-white group-hover:text-[#5facdb] transition-colors" />
+                      <span>LinkedIn</span>
                     </a>
                   </div>
-                  <div className="flex items-center gap-3 text-gray-400">
-                    <Phone className="w-5 h-5 text-[#5facdb]" />
-                    <a
-                      href="tel:+43123456789"
-                      className="hover:text-[#5facdb] transition-colors"
-                    >
-                      +43 123 456 789
-                    </a>
+
+                  {/* Partner Logos */}
+                  <div className="space-y-3">
+                    <div className="flex flex-wrap lg:flex-nowrap gap-3 lg:gap-6 items-center lg:max-w-sm">
+                      <a
+                        href="https://sic.or.at/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="transition-opacity hover:opacity-100"
+                      >
+                        <img
+                          src="https://sic.or.at/wp-content/uploads/2018/05/sic_logo2018.png"
+                          alt="SIC"
+                          className="h-6 w-auto brightness-0 invert opacity-60 hover:opacity-100 transition-opacity"
+                        />
+                      </a>
+                      <a
+                        href="https://www.ppmcag.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="transition-opacity hover:opacity-100"
+                      >
+                        <Image
+                          src="/images/logos/ppmc-logo.svg"
+                          alt="PPMC"
+                          width={60}
+                          height={30}
+                          className="h-6 w-auto brightness-0 invert opacity-60 hover:opacity-100 transition-opacity"
+                        />
+                      </a>
+                      <a
+                        href="https://www.systempro.at/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="transition-opacity hover:opacity-100"
+                      >
+                        <img
+                          src="https://www.systempro.at/wp-content/uploads/2017/02/logo.png?_t=1488061157"
+                          alt="Systempro"
+                          className="h-6 w-auto brightness-0 invert opacity-60 hover:opacity-100 transition-opacity"
+                        />
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -129,7 +174,7 @@ export function Footer() {
                     <li key={service.name}>
                       <a
                         href={service.href}
-                        className="text-gray-400 hover:text-[#5facdb] transition-colors duration-300 hover:translate-x-1 transform inline-flex items-center group"
+                        className="text-sm text-gray-400 hover:text-[#5facdb] transition-colors duration-300 hover:translate-x-1 transform inline-flex items-center group"
                       >
                         {service.name}
                         <ArrowRight className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-all duration-300" />
@@ -149,7 +194,7 @@ export function Footer() {
                     <li key={item.name}>
                       <a
                         href={item.href}
-                        className="text-gray-400 hover:text-[#5facdb] transition-colors duration-300 hover:translate-x-1 transform inline-flex items-center group"
+                        className="text-sm text-gray-400 hover:text-[#5facdb] transition-colors duration-300 hover:translate-x-1 transform inline-flex items-center group"
                       >
                         {item.name}
                         <ArrowRight className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-all duration-300" />
@@ -169,7 +214,7 @@ export function Footer() {
                     <li key={item.name}>
                       <a
                         href={item.href}
-                        className="text-gray-400 hover:text-[#5facdb] transition-colors duration-300 hover:translate-x-1 transform inline-flex items-center group"
+                        className="text-sm text-gray-400 hover:text-[#5facdb] transition-colors duration-300 hover:translate-x-1 transform inline-flex items-center group"
                       >
                         {item.name}
                         <ArrowRight className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-all duration-300" />
@@ -183,13 +228,13 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-800 py-8">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8">
-            <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-              <div className="text-gray-400">
-                © 2024 Dimetrics. Alle Rechte vorbehalten.
+        <div className="border-t border-gray-800 py-6 sm:py-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+              <div className="text-gray-400 text-sm sm:text-base">
+                © {currentYear} Dimetrics. Alle Rechte vorbehalten.
               </div>
-              <div className="text-gray-500 text-sm">
+              <div className="text-gray-500 text-xs sm:text-sm">
                 Made with ❤️ in Austria
               </div>
             </div>

@@ -7,6 +7,7 @@ interface CustomerLogo {
   src: string;
   alt: string;
   animationDelay: number;
+  href: string;
 }
 
 export function CustomerLogos() {
@@ -15,19 +16,37 @@ export function CustomerLogos() {
       src: "/images/logos/a1-telekom-austria.png",
       alt: "A1 Telekom Austria",
       animationDelay: 0,
+      href: "https://www.a1.net/",
     },
-    { src: "/images/logos/ppmc-logo.svg", alt: "PPMC", animationDelay: 0.5 },
-    { src: "/images/logos/jobidy.png", alt: "Jobidy", animationDelay: 1 },
-    { src: "/images/logos/rundata.png", alt: "Rundata", animationDelay: 1.5 },
+    {
+      src: "/images/logos/ppmc-logo.svg",
+      alt: "PPMC",
+      animationDelay: 0.5,
+      href: "https://www.ppmcag.com/",
+    },
+    {
+      src: "/images/logos/jobidy.png",
+      alt: "Jobidy",
+      animationDelay: 1,
+      href: "https://jobidy.at/",
+    },
+    {
+      src: "/images/logos/rundata.png",
+      alt: "Rundata",
+      animationDelay: 1.5,
+      href: "https://rundata.at/",
+    },
     {
       src: "/images/logos/wko-kaernten.png",
       alt: "WKO Kärnten",
       animationDelay: 2,
+      href: "https://www.wko.at/kaernten",
     },
     {
       src: "/images/logos/wp-werkportal.png",
       alt: "WP Werkportal",
       animationDelay: 2.5,
+      href: "https://werkportal.at/",
     },
   ];
 
@@ -46,9 +65,12 @@ export function CustomerLogos() {
 
         <div className="flex flex-wrap items-center justify-center gap-6 lg:gap-8 max-w-6xl mx-auto">
           {logos.map((logo, index) => (
-            <motion.div
+            <motion.a
               key={logo.alt}
-              className="flex items-center justify-center h-12 w-28"
+              href={logo.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center h-12 w-28 cursor-pointer"
               animate={{
                 y: [0, -8, 0],
                 scale: [1, 1.05, 1],
@@ -67,7 +89,7 @@ export function CustomerLogos() {
                 height={48}
                 className="object-contain filter grayscale hover:grayscale-0 transition-all duration-500"
               />
-            </motion.div>
+            </motion.a>
           ))}
         </div>
       </div>

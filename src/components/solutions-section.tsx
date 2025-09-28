@@ -67,14 +67,14 @@ export function SolutionsSection() {
   ];
 
   return (
-    <section className="py-20 px-6 bg-black">
+    <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-black">
       <div className="container mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-center mb-20"
+          className="text-center mb-12 sm:mb-16 lg:mb-20"
         >
           <div className="relative">
             <GradientHeadline>
@@ -101,7 +101,7 @@ export function SolutionsSection() {
         </motion.div>
 
         {/* Alternating Layout */}
-        <div className="space-y-24">
+        <div className="space-y-16 sm:space-y-20 lg:space-y-24">
           {solutions.map((solution, index) => (
             <SolutionCard
               key={solution.title}

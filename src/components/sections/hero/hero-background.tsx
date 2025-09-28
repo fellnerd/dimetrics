@@ -13,7 +13,7 @@ export function HeroBackground({
   imageAlt = "Digital Transformation",
 }: HeroBackgroundProps) {
   return (
-    <div className="absolute right-0 top-0 bottom-0 w-1/2 lg:w-5/12">
+    <div className="absolute right-0 top-0 bottom-0 w-full">
       <motion.div
         initial={{ opacity: 0, x: 40 }}
         animate={{ opacity: 1, x: 0 }}
@@ -27,7 +27,7 @@ export function HeroBackground({
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-black/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-black/60 lg:to-black/20"></div>
       </motion.div>
     </div>
   );
