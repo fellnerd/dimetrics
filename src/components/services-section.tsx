@@ -13,11 +13,11 @@ export function ServicesSection() {
 
   const services = [
     {
-      title: "Cloud",
+      title: "AI Cloud",
       subtitle: "Take the world by cloud",
       fullTitle: "Cloud Strategie & Beratung",
       description:
-        "Jeden Tag wird Cloud-Computing wichtiger, um die Innovation voranzutreiben und die immer neuen Anforderungen von Menschen auf der ganzen Welt zu erfüllen. Nutzen Sie moderne Architekturtechnologien für maximale Geschäftskontinuität.",
+        "Eine durchdachte Cloud-Strategie ist der Schlüssel zu mehr Flexibilität, Skalierbarkeit und Effizienz. Wir unterstützen Sie dabei, die richtige Cloud-Lösung für Ihr Unternehmen zu finden – ob Public, Private oder Hybrid Cloud.Unsere Experten analysieren Ihre bestehenden IT-Strukturen, entwickeln eine maßgeschneiderte Migrationsstrategie und begleiten Sie von der Planung über die Umsetzung bis hin zum laufenden Betrieb. Dabei setzen wir auf sichere, performante und zukunftssichere Architekturen, die sich nahtlos in Ihre Geschäftsprozesse integrieren lassen.",
       backgroundImage: "/images/services/cloud-strategy-bg.png",
       icon: "/images/services/cloud-strategy.svg",
       href: "/services/cloud-strategy",
@@ -27,30 +27,30 @@ export function ServicesSection() {
       subtitle: "Integration neu gedacht",
       fullTitle: "Enterprise Application Integration",
       description:
-        "Vereinheitlichen Sie Datenflüsse, reduzieren Sie Komplexität und steigern Sie Effizienz durch nahtlose Systemintegration. Moderne APIs und Microservices für maximale Flexibilität.",
+        "Mit unserer Enterprise Application Integration (EAI) schaffen wir eine harmonisierte Systemlandschaft, in der Ihre Anwendungen und Daten effizient miteinander kommunizieren. Wir bieten Ihnen Lösungen für effizientes API-Management, das eine reibungslose und moderne Schnittstellenkommunikation ermöglicht.",
       backgroundImage: "/images/services/enterprise-integration-bg.png",
       icon: "/images/services/enterprise-integration.png",
-      href: "/services/enterprise-integration",
+      href: "/services/application-integration",
     },
     {
       title: "Data & Analytics",
       subtitle: "Datengetriebene Entscheidungen",
       fullTitle: "Business Insights & Analytics",
       description:
-        "Messen & maximieren Sie Ihre Technologieinvestitionen – gewinnen Sie Transparenz, um den Wert zu definieren, Kosten zu optimieren & die digitale Transformation voranzutreiben.",
+        "Mit Dimetrics Business Insights verknüpfen und harmonisieren wir Daten aus unterschiedlichen Systemen, um eine zentrale Grundlage für datengetriebene Entscheidungen zu schaffen. Unsere Data Engineering-Expertise sorgt dafür, dass Sie komplexe Daten mit Power BI-Lösungen klar visualisieren können – inklusive direkt umsetzbarer Handlungsempfehlungen.",
       backgroundImage: "/images/services/business-insights-bg.png",
       icon: "/images/services/business-insights.png",
-      href: "/services/business-insights",
+      href: "/services/business-insights-integrations",
     },
     {
       title: "Dimetrics Plattform",
-      subtitle: "Intelligente Automatisierung",
+      subtitle: "Die leistungsstarke Business Process Automation Plattform",
       fullTitle: "Dimetrics Platform Solutions",
       description:
-        "Unsere proprietäre Plattform vereint KI-gestützte Automatisierung, intelligente Workflows und nahtlose Integrationen. Beschleunigen Sie Ihre digitale Transformation mit maßgeschneiderten Low-Code/No-Code Lösungen.",
+        "Unsere selbst entwickelte Low-Code/No-Code Plattform ermöglicht es Ihnen, maßgeschneiderte Anwendungen schnell und ohne tiefgehende Programmierkenntnisse zu erstellen. Mit einer intuitiven Benutzeroberfläche und flexiblen Funktionen können Sie Prozesse automatisieren und digitale Lösungen effizient umsetzen – ganz nach Ihren individuellen Bedürfnissen.",
       backgroundImage: "/images/platform/platform_dark.png",
       icon: "/images/logos/dimetrics-logo.svg",
-      href: "/services/dimetrics-platform",
+      href: "/business-process-automation-platform",
       slideshow: [
         "/images/platform/platform_dark.png",
         "/images/platform/platform_light.png",

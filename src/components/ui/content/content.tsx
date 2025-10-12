@@ -27,12 +27,7 @@ interface RowProps {
 }
 
 // Main Content Component
-const Content = ({
-  children,
-  className = "",
-  spacing = "lg",
-  maxWidth = "7xl",
-}: ContentProps) => {
+const Content = ({ children }: ContentProps) => {
   const spacingClasses = {
     sm: "space-y-4",
     md: "space-y-8",
@@ -52,11 +47,7 @@ const Content = ({
     full: "max-w-full",
   };
 
-  return (
-    <div className={`${maxWidthClasses[maxWidth]} mx-auto ${className}`}>
-      {children}
-    </div>
-  );
+  return <div className={`max-w-7xl mx-auto`}>{children}</div>;
 };
 
 // Column Component

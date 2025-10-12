@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 interface PremiumButtonProps {
   children: React.ReactNode;
@@ -63,16 +64,38 @@ export function PremiumButton({
   );
 
   if (href) {
+    // Prüfe ob es ein externer Link ist
+    const isExternal =
+      href.startsWith("http") ||
+      href.startsWith("mailto:") ||
+      href.startsWith("#");
+
+    if (isExternal) {
+      return (
+        <motion.a
+          href={href}
+          className={baseClasses}
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={onClick}
+          target={href.startsWith("http") ? "_blank" : undefined}
+          rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
+        >
+          {content}
+        </motion.a>
+      );
+    }
+
     return (
-      <motion.a
-        href={href}
-        className={baseClasses}
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        onClick={onClick}
-      >
-        {content}
-      </motion.a>
+      <Link href={href} className={baseClasses}>
+        <motion.div
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.95 }}
+          onClick={onClick}
+        >
+          {content}
+        </motion.div>
+      </Link>
     );
   }
 

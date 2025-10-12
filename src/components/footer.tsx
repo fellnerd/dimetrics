@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { Mail, Phone, MapPin, ArrowRight, Linkedin } from "lucide-react";
 import { PremiumButton } from "./ui/buttons/premium-button";
 
@@ -172,13 +173,13 @@ export function Footer() {
                 <ul className="space-y-3">
                   {services.map((service) => (
                     <li key={service.name}>
-                      <a
+                      <Link
                         href={service.href}
                         className="text-sm text-gray-400 hover:text-[#5facdb] transition-colors duration-300 hover:translate-x-1 transform inline-flex items-center group"
                       >
                         {service.name}
                         <ArrowRight className="w-3 h-3 ml-1 opacity-0 group-hover:opacity-100 transition-all duration-300" />
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>

@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import Link from "next/link";
 
 export function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -34,20 +35,25 @@ export function Navigation() {
             transition={{ duration: 0.6 }}
             className="flex items-center space-x-3"
           >
-            <img
-              src="/images/logos/dimetrics-logo.png"
-              alt="Dimetrics"
-              className={`object-contain transition-all duration-300 ${
-                isScrolled ? "w-6 h-6" : "w-8 h-8"
-              }`}
-            />
-            <span
-              className={`font-light text-white transition-all duration-300 ${
-                isScrolled ? "text-sm" : "text-base"
-              }`}
+            <Link
+              href="/"
+              className="flex items-center space-x-3 hover:opacity-80 transition-all duration-300"
             >
-              dimetrics
-            </span>
+              <img
+                src="/images/logos/dimetrics-logo.png"
+                alt="Dimetrics"
+                className={`object-contain transition-all duration-300 ${
+                  isScrolled ? "w-6 h-6" : "w-8 h-8"
+                }`}
+              />
+              <span
+                className={`font-light text-white transition-all duration-300 ${
+                  isScrolled ? "text-sm" : "text-base"
+                }`}
+              >
+                dimetrics
+              </span>
+            </Link>
           </motion.div>
 
           {/* Desktop Menu */}

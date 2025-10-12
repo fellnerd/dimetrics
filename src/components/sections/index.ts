@@ -2,6 +2,7 @@
 export { HeroTitle, HeroDescription, HeroKPIs } from "./hero/hero-content";
 export { HeroCTA } from "./hero/hero-cta";
 export { HeroBackground } from "./hero/hero-background";
+export { HeroSectionSplit } from "./hero-section-split";
 
 // Solutions Section Components
 export { SolutionCard } from "./solutions/solution-card";

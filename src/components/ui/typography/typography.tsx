@@ -1,5 +1,6 @@
 import React from "react";
 import { ReactNode } from "react";
+import NextLink from "next/link";
 
 // Base Text Props
 interface BaseTextProps {
@@ -104,10 +105,26 @@ const Link = ({ children, className = "", href, onClick }: LinkProps) => {
     "text-[#3d55e2] hover:text-[#5facdb] transition-colors duration-300 underline decoration-1 underline-offset-2";
 
   if (href) {
+    // Prüfe ob es ein externer Link ist
+    const isExternal = href.startsWith("http") || href.startsWith("mailto:");
+
+    if (isExternal) {
+      return (
+        <a
+          href={href}
+          className={`${baseClasses} ${className}`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {children}
+        </a>
+      );
+    }
+
     return (
-      <a href={href} className={`${baseClasses} ${className}`}>
+      <NextLink href={href} className={`${baseClasses} ${className}`}>
         {children}
-      </a>
+      </NextLink>
     );
   }
 

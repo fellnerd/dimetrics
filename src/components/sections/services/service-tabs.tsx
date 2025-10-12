@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { ServiceSlideshow } from "@/components/ui/service-slideshow";
 
 interface Service {
@@ -95,13 +96,13 @@ export function ServiceTabContent({
           </div>
 
           <div className="pt-2 sm:pt-4">
-            <a
+            <Link
               href={service.href}
               className="inline-flex items-center text-[#A100FF] hover:text-[#FF6A00] transition-colors duration-300 font-semibold text-base sm:text-lg group"
             >
               Mehr erfahren
               <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5 transform group-hover:translate-x-1 transition-transform duration-300" />
-            </a>
+            </Link>
           </div>
         </div>
 
