@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build --turbopack",
-    "start": "next start",
-    "lint": "eslint"
+    "build": "next build",
+    "start": "NODE_ENV=production node app.js",
+    "lint": "eslint",
+    "plesk:build": "npm install && npm run build",
+    "plesk:start": "NODE_ENV=production node app.js"
   },
   "dependencies": {
     "@getbrevo/brevo": "^3.0.1",

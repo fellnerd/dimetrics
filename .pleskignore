@@ -1,0 +1,35 @@
+# Development files
+.git/
+.vscode/
+.next/
+node_modules/
+.env.local
+.env.development
+
+# Test files
+*.test.*
+__tests__/
+.playwright-mcp/
+
+# Documentation (kann optional hochgeladen werden)
+README.md
+
+# macOS files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Log files
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Temporary files
+*.tmp
+*.temp
