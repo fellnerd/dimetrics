@@ -19,7 +19,7 @@ In Plesk Panel unter "Node.js":
 # Plesk Deployment Anleitung für dimetrics.io
 
 ## Voraussetzungen
-- Node.js 23.11.1 (verfügbar in Plesk)
+- Node.js 22.20.0 (konfiguriert in Plesk)
 - NPM oder Yarn
 - Plesk Panel mit Node.js Support
 
@@ -32,7 +32,7 @@ Alle Projekt-Dateien außer den in `.pleskignore` angegebenen in das Plesk-Verze
 
 ### 2. Plesk Node.js Konfiguration
 In Plesk Panel unter "Node.js":
-- **Node.js version**: `23.11.1` auswählen
+- **Node.js version**: `22.20.0` auswählen
 - **Application mode**: `production`
 - **Startup file**: `app.js`
 - **Application root**: `/` (Standard)
