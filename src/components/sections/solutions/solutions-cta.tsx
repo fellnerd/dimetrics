@@ -43,11 +43,7 @@ export function SolutionsCTA() {
             verwandeln.
           </p>
 
-          <PremiumButton
-            href="https://go.dimetrics.io"
-            variant="primary"
-            size="xl"
-          >
+          <PremiumButton href="/contact-us" variant="primary" size="xl">
             Jetzt Beratung vereinbaren
           </PremiumButton>
         </div>

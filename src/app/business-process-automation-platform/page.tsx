@@ -18,6 +18,7 @@ import {
 } from "../../components/sections";
 import Image from "next/image";
 import { CallToActionSection } from "../../components/cta-section";
+import { ServiceSlideshow } from "@/components/ui/service-slideshow";
 
 export default function CloudStrategyPage() {
   const kpis = [
@@ -89,6 +90,212 @@ export default function CloudStrategyPage() {
         <div className="absolute inset-0 -z-10 bg-gradient-to-br from-[#3d55e2]/5 via-black to-[#5facdb]/5"></div>
       </section>
 
+      {/* Kernfunktionen Section */}
+      <section className="bg-gray-50 py-12 sm:py-16 lg:py-20 px-4 sm:px-6">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
+          <Content maxWidth="7xl">
+            <Header.H2 orientation="center">
+              Von komplexen Systemen. Zu harmonischer Vernetzung.
+            </Header.H2>
+            <div className="flex -mt-10 justify-center content-center mb-16 max-w-3xl mx-auto">
+              <Typography.Lead className="text-center">
+                Eine einzige Plattform für alle Ihre Geschäftsprozesse – von der
+                Datenintegration bis zur Automatisierung
+              </Typography.Lead>
+            </div>
+
+            <Content.Row cols={3} gap="lg">
+              <Content.Column>
+                <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 h-full">
+                  <div className="w-16 h-16 bg-gradient-to-r from-[#3d55e2] to-[#5facdb] rounded-xl flex items-center justify-center mb-6">
+                    <svg
+                      className="w-8 h-8 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 008 10.172V5L8 4z"
+                      />
+                    </svg>
+                  </div>
+                  <Typography.SubHeadline className="text-xl mb-4">
+                    Low-Code/No-Code Development
+                  </Typography.SubHeadline>
+                  <Typography.Body className="text-gray-600">
+                    Erstellen Sie komplexe Anwendungen und Workflows ohne
+                    Programmierkenntnisse. Drag & Drop Interface für intuitive
+                    Entwicklung.
+                  </Typography.Body>
+                </div>
+              </Content.Column>
+
+              <Content.Column>
+                <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 h-full">
+                  <div className="w-16 h-16 bg-gradient-to-r from-[#5facdb] to-[#A100FF] rounded-xl flex items-center justify-center mb-6">
+                    <svg
+                      className="w-8 h-8 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4"
+                      />
+                    </svg>
+                  </div>
+                  <Typography.SubHeadline className="text-xl mb-4">
+                    Zentrale Datenintegration
+                  </Typography.SubHeadline>
+                  <Typography.Body className="text-gray-600">
+                    Verbinden Sie alle Ihre Systeme und Datenquellen. Über 1500+
+                    Integrationsmöglichkeiten für nahtlose Datenflüsse.
+                  </Typography.Body>
+                </div>
+              </Content.Column>
+
+              <Content.Column>
+                <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 h-full">
+                  <div className="w-16 h-16 bg-gradient-to-r from-[#A100FF] to-[#3d55e2] rounded-xl flex items-center justify-center mb-6">
+                    <svg
+                      className="w-8 h-8 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"
+                      />
+                    </svg>
+                  </div>
+                  <Typography.SubHeadline className="text-xl mb-4">
+                    Business Intelligence & Analytics
+                  </Typography.SubHeadline>
+                  <Typography.Body className="text-gray-600">
+                    Power BI Integration für lizenzfreie Berichte. Erstellen Sie
+                    Dashboards und Analysen ohne zusätzliche Lizenzkosten.
+                  </Typography.Body>
+                </div>
+              </Content.Column>
+            </Content.Row>
+
+            <Content.Row cols={3} gap="lg" className="mt-12">
+              <Content.Column>
+                <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 h-full">
+                  <div className="w-16 h-16 bg-gradient-to-r from-[#3d55e2] to-[#A100FF] rounded-xl flex items-center justify-center mb-6">
+                    <svg
+                      className="w-8 h-8 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a1 1 0 01-1-1V9a1 1 0 011-1h1a2 2 0 100-4H4a1 1 0 01-1-1V4a1 1 0 011-1h3a1 1 0 011 1v1a2 2 0 104 0V4z"
+                      />
+                    </svg>
+                  </div>
+                  <Typography.SubHeadline className="text-xl mb-4">
+                    Prozessautomatisierung
+                  </Typography.SubHeadline>
+                  <Typography.Body className="text-gray-600">
+                    Automatisieren Sie wiederkehrende Aufgaben und Workflows.
+                    Zapier-Integration für maximale Flexibilität und Effizienz.
+                  </Typography.Body>
+                </div>
+              </Content.Column>
+
+              <Content.Column>
+                <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 h-full">
+                  <div className="w-16 h-16 bg-gradient-to-r from-[#5facdb] to-[#3d55e2] rounded-xl flex items-center justify-center mb-6">
+                    <svg
+                      className="w-8 h-8 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                      />
+                    </svg>
+                  </div>
+                  <Typography.SubHeadline className="text-xl mb-4">
+                    Sicherheit & Compliance
+                  </Typography.SubHeadline>
+                  <Typography.Body className="text-gray-600">
+                    DSGVO-konforme Datenverarbeitung und -speicherung.
+                    Rollenbasierte Zugriffskontrolle und sichere
+                    Cloud-Infrastruktur.
+                  </Typography.Body>
+                </div>
+              </Content.Column>
+
+              <Content.Column>
+                <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 h-full">
+                  <div className="w-16 h-16 bg-gradient-to-r from-[#A100FF] to-[#5facdb] rounded-xl flex items-center justify-center mb-6">
+                    <svg
+                      className="w-8 h-8 text-white"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M13 10V3L4 14h7v7l9-11h-7z"
+                      />
+                    </svg>
+                  </div>
+                  <Typography.SubHeadline className="text-xl mb-4">
+                    Schnelle Bereitstellung
+                  </Typography.SubHeadline>
+                  <Typography.Body className="text-gray-600">
+                    Von der Idee zur fertigen Anwendung in Rekordzeit. 90%
+                    schnellere Entwicklung und 68% geringere Kosten.
+                  </Typography.Body>
+                </div>
+              </Content.Column>
+            </Content.Row>
+          </Content>
+        </motion.div>
+      </section>
+
+      <section className="bg-white py-12 sm:py-16 lg:py-20 px-4 sm:px-6">
+        <div className="space-y-6">
+          <CTAHeader
+            title="Unsere Lösungen mit"
+            highlightText="Dimetrics"
+            theme="light"
+            description="Entdecken Sie, wie Dimetrics Ihre Geschäftsprozesse vereinfachen kann."
+          />
+          <CTAButtons
+            primaryText="Zu den Lösungesberichten"
+            secondaryText="Demo vereinbaren"
+            theme="light"
+          />
+        </div>
+      </section>
+
       {/* Main Content Section */}
       <section className="bg-white py-12 sm:py-16 lg:py-20 px-4 sm:px-6">
         <motion.div
@@ -116,13 +323,18 @@ export default function CloudStrategyPage() {
                       90% schnellere Umsetzung Ihrer Geschäftslösungen!
                     </strong>
                   </Typography.SectionTitle>
-                  <Image
-                    src="/images/services/automate.png"
-                    alt="Low-Code Plattform"
-                    width={600}
-                    height={400}
-                    className="mx-auto"
-                  />
+                  <div className="relative mt-8 aspect-[3/2] rounded-2xl overflow-hidden bg-gray-100">
+                    <ServiceSlideshow
+                      images={[
+                        "/images/platform/platform_dark.png",
+                        "/images/platform/platform_light.png",
+                        "/images/platform/platform_chatai_dark.png",
+                      ]}
+                      alt="Dimetrics Low-Code Plattform"
+                      autoPlay={true}
+                      interval={4000}
+                    />
+                  </div>
                 </div>
               </Content.Column>
 
@@ -541,12 +753,6 @@ export default function CloudStrategyPage() {
             </Content.Row>
           </Content>
         </motion.div>
-      </section>
-      <section className="bg-white py-12 sm:py-16 lg:py-20 px-4 sm:px-6">
-        <div className="space-y-6">
-          <CTAHeader theme="light" />
-          <CTAButtons theme="light" />
-        </div>
       </section>
     </>
   );

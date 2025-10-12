@@ -14,7 +14,7 @@ interface CTAButtonsProps {
 export function CTAButtons({
   primaryText = "Beratungsgespräch vereinbaren",
   secondaryText = "Referenzen ansehen",
-  primaryHref = "#contact",
+  primaryHref = "/contact-us",
   secondaryHref = "#testimonials",
   theme = "dark",
 }: CTAButtonsProps) {

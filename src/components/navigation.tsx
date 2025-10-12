@@ -1,7 +1,7 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import Link from "next/link";
@@ -9,14 +9,38 @@ import Link from "next/link";
 export function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [dropdownTimeout, setDropdownTimeout] = useState<NodeJS.Timeout | null>(
+    null
+  );
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
     window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      if (dropdownTimeout) {
+        clearTimeout(dropdownTimeout);
+      }
+    };
+  }, [dropdownTimeout]);
+
+  const handleDropdownEnter = () => {
+    if (dropdownTimeout) {
+      clearTimeout(dropdownTimeout);
+      setDropdownTimeout(null);
+    }
+    setDropdownOpen(true);
+  };
+
+  const handleDropdownLeave = () => {
+    const timeout = setTimeout(() => {
+      setDropdownOpen(false);
+    }, 200);
+    setDropdownTimeout(timeout);
+  };
 
   return (
     <nav
@@ -63,32 +87,113 @@ export function Navigation() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="hidden md:flex items-center space-x-10"
           >
+            {/* Services Dropdown */}
+            <div className="relative">
+              <div
+                className={`flex items-center space-x-1 text-gray-300 hover:text-white transition-all duration-300 font-light cursor-pointer ${
+                  isScrolled ? "text-sm" : "text-base"
+                }`}
+                onMouseEnter={handleDropdownEnter}
+                onMouseLeave={handleDropdownLeave}
+              >
+                <a
+                  href="/#services"
+                  className={`text-gray-300 transition-all duration-300 font-light ${
+                    isScrolled ? "text-sm" : "text-base"
+                  }`}
+                >
+                  Unsere Kompetenzen
+                </a>
+              </div>
+
+              {/* Mega Menu Dropdown - Footer Style */}
+              <div
+                className={`absolute top-full left-0 w-96 bg-gray-950 rounded-xl shadow-2xl mt-2 p-6 z-50 border border-gray-800 transition-all duration-300 ${
+                  dropdownOpen
+                    ? "opacity-100 visible translate-y-0"
+                    : "opacity-0 invisible -translate-y-2"
+                }`}
+                style={{
+                  backgroundImage:
+                    "radial-gradient(circle at 20% 80%, rgba(61, 85, 226, 0.05) 0%, transparent 50%), radial-gradient(circle at 80% 20%, rgba(95, 172, 219, 0.03) 0%, transparent 50%), radial-gradient(circle at 40% 40%, rgba(161, 0, 255, 0.04) 0%, transparent 50%)",
+                }}
+                onMouseEnter={handleDropdownEnter}
+                onMouseLeave={handleDropdownLeave}
+              >
+                <div className="space-y-6">
+                  <div>
+                    <h4 className="text-lg font-semibold text-white mb-4">
+                      Services
+                    </h4>
+                    <ul className="space-y-3">
+                      <li>
+                        <Link
+                          href="/services/cloud-strategy"
+                          className="text-sm text-gray-400 hover:text-[#5facdb] transition-colors duration-300 hover:translate-x-1 transform inline-flex items-center group"
+                        >
+                          Cloud Strategie & Beratung
+                          <ArrowRight className="w-4 h-4 ml-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="/services/application-integration"
+                          className="text-sm text-gray-400 hover:text-[#5facdb] transition-colors duration-300 hover:translate-x-1 transform inline-flex items-center group"
+                        >
+                          Enterprise Integration
+                          <ArrowRight className="w-4 h-4 ml-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="/services/business-insights-integrations"
+                          className="text-sm text-gray-400 hover:text-[#5facdb] transition-colors duration-300 hover:translate-x-1 transform inline-flex items-center group"
+                        >
+                          Business Insights & Analytics
+                          <ArrowRight className="w-4 h-4 ml-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div className="border-t border-gray-800 pt-4">
+                    <h4 className="text-lg font-semibold text-white mb-4">
+                      Plattform
+                    </h4>
+                    <ul className="space-y-3">
+                      <li>
+                        <Link
+                          href="/business-process-automation-platform"
+                          className="text-sm text-gray-400 hover:text-[#5facdb] transition-colors duration-300 hover:translate-x-1 transform inline-flex items-center group"
+                        >
+                          Dimetrics Platform
+                          <ArrowRight className="w-4 h-4 ml-2 opacity-0 group-hover:opacity-100 transition-opacity" />
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             <a
-              href="#services"
-              className={`text-gray-300 hover:text-white transition-all duration-300 font-light ${
-                isScrolled ? "text-sm" : "text-base"
-              }`}
-            >
-              Unsere Kompetenzen
-            </a>
-            <a
-              href="#solutions"
-              className={`text-gray-300 hover:text-white transition-all duration-300 font-light ${
+              href="/#solutions"
+              className={`text-gray-300 transition-all duration-300 font-light ${
                 isScrolled ? "text-sm" : "text-base"
               }`}
             >
               Lösungen
             </a>
             <a
-              href="#about"
+              href="/about"
               className={`text-gray-300 hover:text-white transition-all duration-300 font-light ${
                 isScrolled ? "text-sm" : "text-base"
               }`}
             >
-              Über Dimetrics
+              Wer wir sind
             </a>
             <a
-              href="#contact"
+              href="/contact-us"
               className={`text-gray-300 hover:text-white transition-all duration-300 font-light ${
                 isScrolled ? "text-sm" : "text-base"
               }`}
@@ -97,7 +202,7 @@ export function Navigation() {
             </a>
             {isScrolled ? (
               <a
-                href="#contact"
+                href="/contact-us"
                 className="text-gray-300 hover:text-white transition-all duration-300 font-light text-sm"
               >
                 Beratung vereinbaren
@@ -132,10 +237,10 @@ export function Navigation() {
               <a href="#solutions" className="block text-gray-300">
                 Lösungen
               </a>
-              <a href="#about" className="block text-gray-300">
-                Über Dimetrics
+              <a href="about" className="block text-gray-300">
+                Wer wir sind
               </a>
-              <a href="#contact" className="block text-gray-300">
+              <a href="/contact-us" className="block text-gray-300">
                 Kontakt
               </a>
               <Button className="w-full bg-accenture-purple hover:bg-accenture-purple/90 text-white font-light">

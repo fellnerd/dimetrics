@@ -9,7 +9,7 @@ import { AccentLine } from "./ui";
 const IntroductionSection = () => {
   return (
     <section
-      id="services"
+      id="about"
       className="bg-white py-12 sm:py-16 lg:py-20 px-4 sm:px-6"
     >
       <motion.div

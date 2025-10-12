@@ -162,7 +162,7 @@ export default function PartnershipSection() {
           </div>
 
           <div className="text-center pt-12">
-            <PremiumButton href="#contact" size="md">
+            <PremiumButton href="/contact-us" size="md">
               Lassen Sie uns Ihre Vision verwirklichen
             </PremiumButton>
           </div>

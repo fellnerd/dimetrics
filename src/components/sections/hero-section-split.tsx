@@ -10,6 +10,7 @@ interface HeroSectionSplitProps {
   imageHeight?: number;
   title: string;
   description: string;
+  subText?: string;
   backgroundColor?: "black" | "white" | "gray";
   textColor?: "white" | "black";
 }
@@ -23,6 +24,7 @@ export function HeroSectionSplit({
   description,
   backgroundColor = "black",
   textColor = "white",
+  subText = "",
 }: HeroSectionSplitProps) {
   const bgClass = {
     black: "bg-black",
@@ -76,6 +78,13 @@ export function HeroSectionSplit({
                 >
                   {description}
                 </p>
+                {subText && (
+                  <p
+                    className={`text-lg sm:text-xl lg:text-2xl font-light leading-relaxed ${descriptionClass}`}
+                  >
+                    {subText}
+                  </p>
+                )}
               </div>
             </motion.div>
           </div>

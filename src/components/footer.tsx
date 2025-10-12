@@ -66,17 +66,19 @@ export function Footer() {
               </div>
               <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                 <PremiumButton
-                  href="/kontakt"
+                  href="/contact-us"
                   size="md"
                   className="w-full sm:w-auto"
+                  showArrow={false}
                 >
                   Beratungsgespräch vereinbaren
                 </PremiumButton>
                 <PremiumButton
-                  href="/projekte"
+                  href="/projects"
                   variant="ghost"
                   size="md"
                   className="w-full sm:w-auto"
+                  showArrow={false}
                 >
                   Projekte ansehen
                 </PremiumButton>

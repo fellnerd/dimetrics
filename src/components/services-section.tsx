@@ -8,7 +8,11 @@ import {
   ServiceTabContent,
 } from "./sections/services/service-tabs";
 
-export function ServicesSection() {
+type ServicesSectionProps = {
+  title?: string;
+};
+
+export function ServicesSection({ title }: ServicesSectionProps) {
   const [activeTab, setActiveTab] = useState(0);
 
   const services = [
@@ -71,7 +75,7 @@ export function ServicesSection() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <ServicesHeader />
+          <ServicesHeader title={title} />
           <ServiceTabNavigation
             services={services}
             activeTab={activeTab}
