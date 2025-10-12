@@ -18,10 +18,8 @@ const nextConfig: NextConfig = {
     unoptimized: false,
   },
   
-  // Bessere Kompatibilität mit Plesk
-  experimental: {
-    serverComponentsExternalPackages: ['@getbrevo/brevo'],
-  },
+  // Korrekte Konfiguration für Next.js 15
+  serverExternalPackages: ['@getbrevo/brevo'],
   
   // Headers für Sicherheit
   async headers() {

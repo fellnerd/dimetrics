@@ -49,17 +49,46 @@ NEXT_TELEMETRY_DISABLED=1
 ```
 
 ### 4. Dependencies installieren und Build erstellen
+
+**Wichtig**: Bei Berechtigungsproblemen in Plesk folgende Schritte beachten:
+
+#### Option A: Plesk Panel Method (Empfohlen)
 In Plesk Panel unter "Node.js" → "NPM":
 
-**Schritt 1**: NPM Install
+**Schritt 1**: Produktions-package.json verwenden
 ```bash
-npm install
+# Falls Berechtigungsprobleme auftreten, verwende die optimierte package.json:
+cp package.plesk.json package.json
 ```
 
-**Schritt 2**: Production Build
+**Schritt 2**: NPM Install (nur Production Dependencies)
+```bash
+npm install --only=production
+```
+
+**Schritt 3**: Production Build
 ```bash
 npm run build
 ```
+
+#### Option B: SSH/Terminal Method (Falls verfügbar)
+```bash
+# Berechtigungen korrigieren (falls notwendig)
+sudo chown -R psacln:psaserv /var/www/vhosts/dimetrics.io/dimetrics_website/dimetrics/
+sudo chmod -R 755 /var/www/vhosts/dimetrics.io/dimetrics_website/dimetrics/
+
+# NPM Cache leeren
+npm cache clean --force
+
+# Installation
+npm install --only=production
+npm run build
+```
+
+#### Bei persistierenden Berechtigungsproblemen:
+1. **File Manager verwenden**: Package.json über Plesk File Manager bearbeiten
+2. **DevDependencies entfernen**: Verwende `package.plesk.json` als `package.json`
+3. **Support kontaktieren**: Plesk-Administrator um Berechtigungsanpassung bitten
 
 ### 5. Anwendung starten
 - In Plesk Panel "Enable Node.js" aktivieren

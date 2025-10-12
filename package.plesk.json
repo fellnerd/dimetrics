@@ -3,12 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "build": "next build",
-    "build:plesk": "next build --no-lint",
     "start": "NODE_ENV=production node app.js",
-    "lint": "eslint",
-    "plesk:build": "npm install && npm run build:plesk",
+    "plesk:install": "npm install --only=production",
+    "plesk:build": "npm run build",
     "plesk:start": "NODE_ENV=production node app.js"
   },
   "dependencies": {
@@ -29,15 +28,8 @@
     "tailwind-merge": "^3.3.1",
     "zod": "^4.1.11"
   },
-  "devDependencies": {
-    "@eslint/eslintrc": "^3",
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "eslint": "^8.57.0",
-    "eslint-config-next": "15.5.4",
-    "tailwindcss": "^4",
-    "typescript": "^5"
+  "engines": {
+    "node": ">=22.20.0",
+    "npm": ">=10.0.0"
   }
 }

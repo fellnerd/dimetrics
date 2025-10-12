@@ -6,6 +6,10 @@ node_modules/
 .env.local
 .env.development
 
+# Package files (use package.plesk.json instead)
+package-lock.json
+npm-debug.log*
+
 # Test files
 *.test.*
 __tests__/
@@ -13,6 +17,11 @@ __tests__/
 
 # Documentation (kann optional hochgeladen werden)
 README.md
+
+# ESLint und Development Tools
+.eslintrc.*
+.prettierrc.*
+eslint.config.*
 
 # macOS files
 .DS_Store
