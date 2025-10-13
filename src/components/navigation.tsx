@@ -130,29 +130,29 @@ export function Navigation() {
             className="md:hidden absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-md border-b border-gray-800"
           >
             <div className="px-6 py-4 space-y-4">
-              <a 
-                href="/#services" 
+              <a
+                href="/#services"
                 className="block text-gray-300 hover:text-white transition-colors duration-300"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Unsere Kompetenzen
               </a>
-              <a 
-                href="/#solutions" 
+              <a
+                href="/#solutions"
                 className="block text-gray-300 hover:text-white transition-colors duration-300"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Lösungen
               </a>
-              <Link 
-                href="/about" 
+              <Link
+                href="/about"
                 className="block text-gray-300 hover:text-white transition-colors duration-300"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 Wer wir sind
               </Link>
-              <Link 
-                href="/contact-us" 
+              <Link
+                href="/contact-us"
                 className="block text-gray-300 hover:text-white transition-colors duration-300"
                 onClick={() => setMobileMenuOpen(false)}
               >
