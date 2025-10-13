@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion"; // Deaktiviert - Ersetzt durch native Tailwind Animationen
 
 interface FloatingDecorationsProps {
   position?: "top-left" | "top-right" | "bottom-left" | "bottom-right" | "both";
@@ -31,32 +31,13 @@ export function FloatingDecorations({
   return (
     <>
       {showTopLeft && (
-        <motion.div
-          className={`absolute -top-4 -left-4 ${sizes[size].primary} ${colors.primary} rounded-full blur-xl`}
-          animate={{
-            scale: [1, 1.1, 1],
-            opacity: [0.3, 0.5, 0.3],
-          }}
-          transition={{
-            duration: 4,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
+        <div
+          className={`absolute -top-4 -left-4 ${sizes[size].primary} ${colors.primary} rounded-full blur-xl animate-pulse`}
         />
       )}
       {showBottomRight && (
-        <motion.div
-          className={`absolute -bottom-4 -right-4 ${sizes[size].secondary} ${colors.secondary} rounded-full blur-xl`}
-          animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.2, 0.4, 0.2],
-          }}
-          transition={{
-            duration: 5,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 1,
-          }}
+        <div
+          className={`absolute -bottom-4 -right-4 ${sizes[size].secondary} ${colors.secondary} rounded-full blur-xl animate-pulse`}
         />
       )}
     </>

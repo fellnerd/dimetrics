@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion"; // Deaktiviert - Ersetzt durch native Tailwind Animationen
 
 interface HeroSectionSplitProps {
   imageSrc: string;
@@ -59,10 +59,7 @@ export function HeroSectionSplit({
         {/* Right Content - Text */}
         <div className="lg:w-1/2 relative z-10 px-4 sm:px-6 py-12 sm:py-16 lg:py-16">
           <div className="space-y-8 lg:space-y-12">
-            <motion.div
-              initial={{ opacity: 0, x: -40 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
+            <div
               className="space-y-6 lg:space-y-8"
             >
               <h1
@@ -86,7 +83,7 @@ export function HeroSectionSplit({
                   </p>
                 )}
               </div>
-            </motion.div>
+            </div>
           </div>
         </div>
       </div>

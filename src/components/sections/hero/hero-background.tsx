@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion"; // ERSETZT DURCH NATIVE TAILWIND ANIMATIONEN
 import Image from "next/image";
 
 interface HeroBackgroundProps {
@@ -14,12 +14,7 @@ export function HeroBackground({
 }: HeroBackgroundProps) {
   return (
     <div className="absolute right-0 top-0 bottom-0 w-full">
-      <motion.div
-        initial={{ opacity: 0, x: 40 }}
-        animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.8, delay: 0.4 }}
-        className="relative h-full w-full"
-      >
+      <div className="relative h-full w-full animate-fade-slide-in-right-delayed">
         <Image
           src={imageSrc}
           alt={imageAlt}
@@ -28,7 +23,7 @@ export function HeroBackground({
           priority
         />
         <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-black/60 lg:to-black/20"></div>
-      </motion.div>
+      </div>
     </div>
   );
 }

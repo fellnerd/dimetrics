@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion"; // Deaktiviert - Ersetzt durch native Tailwind Animationen
 import Image from "next/image";
 
 interface Testimonial {
@@ -19,12 +19,8 @@ interface TestimonialCardProps {
 
 export function TestimonialCard({ testimonial, index }: TestimonialCardProps) {
   return (
-    <motion.div
+    <div
       key={index}
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: testimonial.delay }}
-      viewport={{ once: true }}
       className="bg-black border border-gray-800 rounded-lg p-8"
     >
       <div className="mb-6">
@@ -48,6 +44,6 @@ export function TestimonialCard({ testimonial, index }: TestimonialCardProps) {
           <div className="text-sm text-gray-400">{testimonial.role}</div>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }

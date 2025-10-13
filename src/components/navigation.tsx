@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion"; // ERSETZT DURCH NATIVE TAILWIND ANIMATIONEN
 import { useState, useEffect } from "react";
 import Link from "next/link";
 
@@ -31,12 +31,7 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="flex items-center space-x-3"
-          >
+          <div className="flex items-center space-x-3 animate-fade-slide-in-left">
             <Link
               href="/"
               className="flex items-center space-x-3 hover:opacity-80 transition-all duration-300"
@@ -56,15 +51,10 @@ export function Navigation() {
                 dimetrics
               </span>
             </Link>
-          </motion.div>
+          </div>
 
           {/* Desktop Menu */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="hidden md:flex items-center space-x-10"
-          >
+          <div className="hidden md:flex items-center space-x-10 animate-fade-slide-in-right">
             <a
               href="/#services"
               className={`text-gray-300 hover:text-white transition-all duration-300 font-light ${
@@ -111,7 +101,7 @@ export function Navigation() {
                 </Button>
               </Link>
             )}
-          </motion.div>
+          </div>
 
           {/* Mobile menu button */}
           <button
@@ -124,11 +114,7 @@ export function Navigation() {
 
         {/* Mobile Menu */}
         {mobileMenuOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="md:hidden absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-md border-b border-gray-800"
-          >
+          <div className="md:hidden absolute top-full left-0 right-0 bg-gray-900/95 backdrop-blur-md border-b border-gray-800 animate-fade-slide-in-down">
             <div className="px-6 py-4 space-y-4">
               <a
                 href="/#services"
@@ -164,7 +150,7 @@ export function Navigation() {
                 </Button>
               </Link>
             </div>
-          </motion.div>
+          </div>
         )}
       </div>
     </nav>

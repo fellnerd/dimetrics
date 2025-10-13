@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion"; // Deaktiviert - Ersetzt durch native Tailwind Animationen
 import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
@@ -72,42 +72,35 @@ export function PremiumButton({
 
     if (isExternal) {
       return (
-        <motion.a
+        <a
           href={href}
-          className={baseClasses}
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
+          className={`${baseClasses} hover:scale-105 active:scale-95 transition-transform duration-200`}
           onClick={onClick}
           target={href.startsWith("http") ? "_blank" : undefined}
           rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
         >
           {content}
-        </motion.a>
+        </a>
       );
     }
 
     return (
-      <Link href={href} className={baseClasses}>
-        <motion.div
-          whileHover={{ scale: 1.05 }}
-          whileTap={{ scale: 0.95 }}
-          onClick={onClick}
-        >
-          {content}
-        </motion.div>
+      <Link
+        href={href}
+        className={`${baseClasses} hover:scale-105 active:scale-95 transition-transform duration-200`}
+      >
+        <div onClick={onClick}>{content}</div>
       </Link>
     );
   }
 
   return (
-    <motion.button
-      className={baseClasses}
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.95 }}
+    <button
+      className={`${baseClasses} hover:scale-105 active:scale-95 transition-transform duration-200`}
       onClick={onClick}
       disabled={disabled}
     >
       {content}
-    </motion.button>
+    </button>
   );
 }

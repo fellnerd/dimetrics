@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion"; // Deaktiviert - Ersetzt durch native Tailwind Animationen
 import Image from "next/image";
 
 interface CustomerLogo {
@@ -51,13 +51,7 @@ export function CustomerLogos() {
   ];
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: 0.6 }}
-      viewport={{ once: true }}
-      className="mt-32"
-    >
+    <div className="mt-32 animate-fade-slide-in-up-delayed">
       <div className="bg-white rounded-3xl py-16 px-8">
         <p className="text-gray-600 text-lg mb-12 font-light text-center">
           Vertraut von führenden Unternehmen
@@ -65,22 +59,12 @@ export function CustomerLogos() {
 
         <div className="flex flex-wrap items-center justify-center gap-6 lg:gap-8 max-w-6xl mx-auto">
           {logos.map((logo, index) => (
-            <motion.a
+            <a
               key={logo.alt}
               href={logo.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center h-12 w-28 cursor-pointer"
-              animate={{
-                y: [0, -8, 0],
-                scale: [1, 1.05, 1],
-              }}
-              transition={{
-                duration: 4 + index * 0.3,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: logo.animationDelay,
-              }}
+              className="flex items-center justify-center h-12 w-28 cursor-pointer animate-pulse hover:scale-105 transition-transform duration-300"
             >
               <Image
                 src={logo.src}
@@ -89,10 +73,10 @@ export function CustomerLogos() {
                 height={48}
                 className="object-contain filter grayscale hover:grayscale-0 transition-all duration-500"
               />
-            </motion.a>
+            </a>
           ))}
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }

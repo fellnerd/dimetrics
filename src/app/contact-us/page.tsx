@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion"; // Deaktiviert - Ersetzt durch native Tailwind Animationen
 import { Header } from "@/components/ui/header";
 import Content from "@/components/ui/content/content";
 import Typography from "@/components/ui/typography/typography";
@@ -92,12 +92,7 @@ export default function ContactPage() {
     <>
       {/* Main Content Section */}
       <section className="bg-white py-12 sm:py-16 lg:py-20 px-4 sm:px-6 mt-20">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
+        <div className="animate-fade-slide-in-up">
           <Content maxWidth="7xl">
             <Content.Row cols={2} alignItems="start">
               <Content.Column>
@@ -122,17 +117,12 @@ export default function ContactPage() {
               </Content.Column>
             </Content.Row>
           </Content>
-        </motion.div>
+        </div>
       </section>
 
       {/* Contact Details Section */}
       <section className="bg-white py-12 sm:py-16 lg:py-20 px-4 sm:px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
+        <div className="animate-fade-slide-in-up">
           <Content maxWidth="6xl">
             <Content.Row cols={3} alignItems="start">
               {/* Telefon */}
@@ -179,17 +169,12 @@ export default function ContactPage() {
               </Content.Column>
             </Content.Row>
           </Content>
-        </motion.div>
+        </div>
       </section>
 
       {/* Team Contacts Section */}
       <section className="bg-gray-50 py-12 sm:py-16 lg:py-20 px-4 sm:px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
+        <div className="animate-fade-slide-in-up">
           <Content maxWidth="6xl">
             <div className="text-center mb-12">
               <Header.H2 className="mb-6">Ihr Ansprechpartner-Team</Header.H2>
@@ -368,17 +353,12 @@ export default function ContactPage() {
               </Content.Column>
             </Content.Row>
           </Content>
-        </motion.div>
+        </div>
       </section>
 
       {/* Contact Form Section */}
       <section className="bg-gray-50 py-12 sm:py-16 lg:py-20 px-4 sm:px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
+        <div className="animate-fade-slide-in-up">
           <Content maxWidth="4xl">
             <Content.Row cols={1} alignItems="center">
               <Content.Column>
@@ -402,9 +382,7 @@ export default function ContactPage() {
                 >
                   {/* Status-Meldungen */}
                   {submitStatus.type && (
-                    <motion.div
-                      initial={{ opacity: 0, y: -10 }}
-                      animate={{ opacity: 1, y: 0 }}
+                    <div
                       className={`mb-6 p-4 rounded-xl border ${
                         submitStatus.type === "success"
                           ? "bg-green-50 border-green-200 text-green-800"
@@ -412,7 +390,7 @@ export default function ContactPage() {
                       }`}
                     >
                       <p className="font-medium">{submitStatus.message}</p>
-                    </motion.div>
+                    </div>
                   )}
 
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
@@ -555,17 +533,12 @@ export default function ContactPage() {
               </Content.Column>
             </Content.Row>
           </Content>
-        </motion.div>
+        </div>
       </section>
 
       {/* CTA Section */}
       <section className="bg-white py-12 sm:py-16 lg:py-20 px-4 sm:px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
+        <div className="animate-fade-slide-in-up">
           <Content maxWidth="4xl">
             <Content.Row cols={1} alignItems="center">
               <Content.Column>
@@ -582,7 +555,7 @@ export default function ContactPage() {
               </Content.Column>
             </Content.Row>
           </Content>
-        </motion.div>
+        </div>
       </section>
     </>
   );

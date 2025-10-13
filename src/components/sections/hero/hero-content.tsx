@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion"; // ERSETZT DURCH NATIVE TAILWIND ANIMATIONEN
 import { AccentLine } from "@/components/ui/decorations/accent-line";
 
 interface HeroTitleProps {
@@ -45,19 +45,13 @@ interface HeroKPIsProps {
 
 export function HeroKPIs({ kpis }: HeroKPIsProps) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: 0.8 }}
-      className="w-full mt-12 lg:absolute lg:bottom-24 lg:right-4 lg:w-[28rem] grid grid-cols-2 gap-3 lg:gap-3 px-6 lg:px-0"
-    >
+    <div className="w-full mt-12 lg:absolute lg:bottom-24 lg:right-4 lg:w-[28rem] grid grid-cols-2 gap-3 lg:gap-3 px-6 lg:px-0 animate-fade-slide-in-up">
       {kpis.map((kpi, index) => (
-        <motion.div
+        <div
           key={kpi.label}
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.4, delay: 0.8 + index * 0.1 }}
-          className="bg-gray-900/50 backdrop-blur-sm border border-gray-800/40 rounded-lg p-3 lg:p-3 text-center hover:border-[#5facdb]/50 transition-colors duration-300 min-h-[80px] lg:min-h-[auto] flex flex-col justify-center"
+          className={`bg-gray-900/50 backdrop-blur-sm border border-gray-800/40 rounded-lg p-3 lg:p-3 text-center hover:border-[#5facdb]/50 transition-colors duration-300 min-h-[80px] lg:min-h-[auto] flex flex-col justify-center animate-stagger-${
+            index + 1
+          }`}
         >
           <div className="text-lg lg:text-2xl font-bold text-[#A100FF] mb-1 lg:mb-1">
             {kpi.number}
@@ -65,8 +59,8 @@ export function HeroKPIs({ kpis }: HeroKPIsProps) {
           <div className="text-xs lg:text-xs text-gray-300 font-light leading-tight">
             {kpi.label}
           </div>
-        </motion.div>
+        </div>
       ))}
-    </motion.div>
+    </div>
   );
 }

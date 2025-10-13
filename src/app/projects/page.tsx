@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion"; // Deaktiviert - Ersetzt durch native Tailwind Animationen
 import { Header } from "@/components/ui/header";
 import Content from "@/components/ui/content/content";
 import Typography from "@/components/ui/typography/typography";
@@ -90,11 +90,7 @@ export default function ProjectsPage() {
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Hero Section */}
       <section className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
+        <div>
           <Content maxWidth="6xl">
             <div className="text-center mb-16">
               <Header.H1 className="mb-6">
@@ -111,7 +107,7 @@ export default function ProjectsPage() {
               </Typography.Body>
             </div>
           </Content>
-        </motion.div>
+        </div>
       </section>
 
       {/* Projects Grid */}
@@ -119,12 +115,8 @@ export default function ProjectsPage() {
         <Content maxWidth="7xl">
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
             {projects.map((project, index) => (
-              <motion.div
+              <div
                 key={project.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
                 className="group relative bg-white rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-200/50"
               >
                 {/* Project Image */}
@@ -188,7 +180,7 @@ export default function ProjectsPage() {
                     <ExternalLink className="w-4 h-4 group-hover/link:translate-x-1 transition-transform duration-300" />
                   </Link>
                 </div>
-              </motion.div>
+              </div>
             ))}
           </div>
         </Content>
@@ -196,12 +188,7 @@ export default function ProjectsPage() {
 
       {/* CTA Section */}
       <section className="py-16 sm:py-20 px-4 sm:px-6 bg-gradient-to-r from-[#3d55e2] via-[#5facdb] to-[#A100FF]">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
+        <div>
           <Content maxWidth="4xl">
             <div className="text-center text-white">
               <Header.H2 className="mb-6">
@@ -226,7 +213,7 @@ export default function ProjectsPage() {
               </div>
             </div>
           </Content>
-        </motion.div>
+        </div>
       </section>
     </div>
   );

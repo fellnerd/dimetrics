@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion"; // ERSETZT DURCH NATIVE TAILWIND ANIMATIONEN
 import {
   GradientHeadline,
   GradientText,
@@ -38,13 +38,7 @@ export function CTAHeader({
   }[theme];
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-      viewport={{ once: true }}
-      className="space-y-8 text-center"
-    >
+    <div className="space-y-8 text-center animate-fade-slide-in-up">
       <h3 className="text-4xl lg:text-5xl font-bold mb-8 leading-tight">
         <span
           className={`block bg-gradient-to-r ${themeClasses.titleGradient} bg-clip-text text-transparent`}
@@ -62,6 +56,6 @@ export function CTAHeader({
       >
         {description}
       </SectionDescription>
-    </motion.div>
+    </div>
   );
 }

@@ -1,7 +1,10 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { GradientHeadline, GradientText } from "./ui/typography/gradient-headline";
+// import { motion } from "framer-motion"; // ERSETZT DURCH NATIVE TAILWIND ANIMATIONEN
+import {
+  GradientHeadline,
+  GradientText,
+} from "./ui/typography/gradient-headline";
 import { SectionDescription } from "./ui/typography/section-description";
 import { TestimonialCard } from "./sections/testimonials/testimonial-card";
 
@@ -48,26 +51,16 @@ export function TestimonialsSection() {
   return (
     <section className="bg-gray-950 py-32">
       <div className="max-w-7xl mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="text-center mb-20"
-        >
+        <div className="text-center mb-20 animate-fade-slide-in-up">
           <GradientHeadline>
-            <GradientText gradient="secondary">
-              Erfolgs
-            </GradientText>
-            <GradientText gradient="primary">
-              geschichten
-            </GradientText>
+            <GradientText gradient="secondary">Erfolgs</GradientText>
+            <GradientText gradient="primary">geschichten</GradientText>
           </GradientHeadline>
           <SectionDescription className="text-gray-400">
             Unsere Partner vertrauen auf unsere Expertise für ihre digitale
             Transformation.
           </SectionDescription>
-        </motion.div>
+        </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {testimonials.map((testimonial, index) => (

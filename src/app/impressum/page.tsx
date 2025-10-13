@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion"; // Deaktiviert - Ersetzt durch native Tailwind Animationen
 import { Header } from "@/components/ui/header";
 import Content from "@/components/ui/content/content";
 import Typography from "@/components/ui/typography/typography";
@@ -13,11 +13,7 @@ export default function ImpressumPage() {
     <PageLayout>
       {/* Header Section */}
       <section className="bg-white py-12 sm:py-16 lg:py-20 px-4 sm:px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-        >
+        <div>
           <Content maxWidth="4xl">
             <div className="mb-8">
               <Link
@@ -34,19 +30,13 @@ export default function ImpressumPage() {
               GewO und § 14 UGB
             </Typography.Body>
           </Content>
-        </motion.div>
+        </div>
       </section>
 
       {/* Content Section */}
       <section className="bg-white py-12 sm:py-16 px-4 sm:px-6">
         <Content maxWidth="4xl">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="space-y-12"
-          >
+          <div className="space-y-12">
             {/* Webseitenbetreiber */}
             <Content.Row cols={1}>
               <Content.Column>
@@ -187,7 +177,7 @@ export default function ImpressumPage() {
                 </Typography.Body>
               </Content.Column>
             </Content.Row>
-          </motion.div>
+          </div>
         </Content>
       </section>
     </PageLayout>

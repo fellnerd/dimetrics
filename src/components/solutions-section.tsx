@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion"; // ERSETZT DURCH NATIVE TAILWIND ANIMATIONEN
 import {
   GradientHeadline,
   GradientText,
@@ -72,13 +72,7 @@ export function SolutionsSection() {
       className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-black"
     >
       <div className="container mx-auto max-w-7xl">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center mb-12 sm:mb-16 lg:mb-20"
-        >
+        <div className="text-center mb-12 sm:mb-16 lg:mb-20 animate-fade-slide-in-up">
           <div className="relative">
             <GradientHeadline>
               <GradientText gradient="secondary">Lösungen,</GradientText>
@@ -101,7 +95,7 @@ export function SolutionsSection() {
             </HighlightedText>{" "}
             ermöglichen.
           </SectionDescription>
-        </motion.div>
+        </div>
 
         {/* Alternating Layout */}
         <div className="space-y-16 sm:space-y-20 lg:space-y-24">

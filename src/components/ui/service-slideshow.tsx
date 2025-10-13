@@ -67,12 +67,8 @@ export function ServiceSlideshow({
       {/* Main slideshow container */}
       <div className="relative w-full h-full overflow-hidden rounded-2xl">
         <AnimatePresence mode="wait">
-          <motion.div
+          <div
             key={currentSlide}
-            initial={{ opacity: 0, x: 300 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -300 }}
-            transition={{ duration: 0.6, ease: "easeInOut" }}
             className="absolute inset-0"
           >
             <Image
@@ -81,7 +77,7 @@ export function ServiceSlideshow({
               fill
               className="object-contain"
             />
-          </motion.div>
+          </div>
         </AnimatePresence>
       </div>
 

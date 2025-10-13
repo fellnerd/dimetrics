@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion"; // Deaktiviert - Ersetzt durch native Tailwind Animationen
 import { ExternalLink } from "lucide-react";
 import Image from "next/image";
 import { CategoryBadge } from "@/components/ui/badges/category-badge";
@@ -21,12 +21,8 @@ interface SolutionCardProps {
 
 export function SolutionCard({ solution, index }: SolutionCardProps) {
   return (
-    <motion.div
+    <div
       key={solution.title}
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, delay: index * 0.1 }}
-      viewport={{ once: true }}
       className={`grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center ${
         index % 2 === 1 ? "lg:direction-rtl" : ""
       }`}
@@ -101,6 +97,6 @@ export function SolutionCard({ solution, index }: SolutionCardProps) {
           </a>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }

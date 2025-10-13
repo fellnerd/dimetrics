@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion"; // ERSETZT DURCH NATIVE TAILWIND ANIMATIONEN
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
@@ -18,12 +18,7 @@ export function HeroCTA({
   onSecondaryClick,
 }: HeroCTAProps) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: 0.5 }}
-      className="flex flex-col sm:flex-row gap-4"
-    >
+    <div className="flex flex-col sm:flex-row gap-4 animate-fade-slide-in-up-delayed">
       <Button
         variant="ghost"
         size="lg"
@@ -41,6 +36,6 @@ export function HeroCTA({
       >
         {secondaryButtonText}
       </Button>
-    </motion.div>
+    </div>
   );
 }

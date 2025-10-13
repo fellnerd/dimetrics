@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion"; // ERSETZT DURCH NATIVE TAILWIND ANIMATIONEN
 import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -61,15 +61,11 @@ export function ServiceTabContent({
   activeTab,
 }: ServiceTabContentProps) {
   return (
-    <motion.div
+    <div
       key={service.title}
-      initial={{ opacity: 0, x: 20 }}
-      animate={{
-        opacity: activeTab === index ? 1 : 0,
-        x: activeTab === index ? 0 : 20,
-      }}
-      transition={{ duration: 0.4, ease: "easeOut" }}
-      className={`absolute inset-0 ${activeTab === index ? "block" : "hidden"}`}
+      className={`absolute inset-0 ${
+        activeTab === index ? "block animate-fade-slide-in-right" : "hidden"
+      }`}
     >
       <div
         className={`grid gap-8 sm:gap-12 lg:gap-16 items-center ${
@@ -146,6 +142,6 @@ export function ServiceTabContent({
           )}
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }

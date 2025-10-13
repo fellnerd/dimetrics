@@ -1,18 +1,12 @@
 "use client";
 
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion"; // ERSETZT DURCH NATIVE TAILWIND ANIMATIONEN
 import { ArrowRight } from "lucide-react";
 import { PremiumButton } from "@/components/ui/buttons/premium-button";
 
 export function SolutionsCTA() {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: 0.4 }}
-      viewport={{ once: true }}
-      className="text-center mt-16 md:mt-24 lg:mt-32"
-    >
+    <div className="text-center mt-16 md:mt-24 lg:mt-32 animate-fade-slide-in-up">
       <div className="relative group">
         {/* Enhanced background with multiple layers */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#3d55e2]/20 via-[#5facdb]/20 to-[#A100FF]/20 rounded-2xl md:rounded-3xl blur-xl group-hover:blur-2xl transition-all duration-700"></div>
@@ -48,6 +42,6 @@ export function SolutionsCTA() {
           </PremiumButton>
         </div>
       </div>
-    </motion.div>
+    </div>
   );
 }

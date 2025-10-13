@@ -1,17 +1,13 @@
 "use client";
 
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion"; // Deaktiviert - Ersetzt durch native Tailwind Animationen
 import Typography from "./ui/typography/typography";
 import Content from "./ui/content/content";
 
 const TypographyExampleSection = () => {
   return (
     <section className="bg-white py-24">
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
+      <div
       >
         <Content maxWidth="7xl">
           {/* Header */}
@@ -196,7 +192,7 @@ const TypographyExampleSection = () => {
             </Content.Column>
           </Content.Row>
         </Content>
-      </motion.div>
+      </div>
     </section>
   );
 };

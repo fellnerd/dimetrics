@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion"; // Deaktiviert - Ersetzt durch native Tailwind Animationen
 import { Header } from "@/components/ui/header";
 import Content from "@/components/ui/content/content";
 import Typography from "@/components/ui/typography/typography";
@@ -35,12 +35,7 @@ export default function CloudStrategyPage() {
 
           {/* Right Content - Right-aligned Background Image */}
           <div className="absolute right-0 top-0 bottom-0 w-1/2 lg:w-2/5 flex items-center justify-end overflow-visible">
-            <motion.div
-              initial={{ opacity: 0, x: 40 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="relative flex items-center justify-end w-auto h-auto"
-            >
+            <div className="relative flex items-center justify-end w-auto h-auto animate-fade-slide-in-right-delayed">
               <Image
                 src={"/images/platform/platform_dark.png"}
                 alt={"Business Process Automation Platform"}
@@ -54,17 +49,12 @@ export default function CloudStrategyPage() {
                 }}
               />
               <div className="absolute inset-0 bg-gradient-to-l from-transparent via-transparent to-black/80 lg:to-black/40"></div>
-            </motion.div>
+            </div>
           </div>
 
           {/* Title - Desktop positioned absolutely */}
           <div className="hidden lg:block absolute lg:top-32 lg:left-24 lg:w-[36rem] z-20">
-            <motion.div
-              initial={{ opacity: 0, x: -40 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="space-y-6 bg-gray-900/50 backdrop-blur-sm border border-gray-800/40 rounded-2xl p-6 max-w-2xl"
-            >
+            <div className="space-y-6 bg-gray-900/50 backdrop-blur-sm border border-gray-800/40 rounded-2xl p-6 max-w-2xl animate-fade-slide-in-left-delayed">
               <h1 className="text-4xl xl:text-5xl font-bold leading-tight text-left">
                 <span className="block text-white mb-2">
                   Business Process Automation auf einer
@@ -77,7 +67,7 @@ export default function CloudStrategyPage() {
                 schnelle Erstellung maßgeschneiderter Anwendungen – ganz ohne
                 tiefgehende Programmierkenntnisse
               </HeroDescription>
-            </motion.div>
+            </div>
           </div>
 
           {/* KPI Cards - Desktop positioned absolutely */}
@@ -92,12 +82,7 @@ export default function CloudStrategyPage() {
 
       {/* Kernfunktionen Section */}
       <section className="bg-gray-50 py-12 sm:py-16 lg:py-20 px-4 sm:px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
+        <div className="animate-fade-slide-in-up">
           <Content maxWidth="7xl">
             <Header.H2 orientation="center">
               Von komplexen Systemen. Zu harmonischer Vernetzung.
@@ -277,7 +262,7 @@ export default function CloudStrategyPage() {
               </Content.Column>
             </Content.Row>
           </Content>
-        </motion.div>
+        </div>
       </section>
 
       <section className="bg-white py-12 sm:py-16 lg:py-20 px-4 sm:px-6">
@@ -298,12 +283,7 @@ export default function CloudStrategyPage() {
 
       {/* Main Content Section */}
       <section className="bg-white py-12 sm:py-16 lg:py-20 px-4 sm:px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
+        <div className="animate-fade-slide-in-up">
           <Content maxWidth="7xl">
             <Content.Row cols={2} alignItems="start">
               <Content.Column>
@@ -389,15 +369,10 @@ export default function CloudStrategyPage() {
               </Content.Column>
             </Content.Row>
           </Content>
-        </motion.div>
+        </div>
       </section>
       <section className="bg-white py-12 sm:py-16 lg:py-20 px-4 sm:px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
+        <div className="animate-fade-slide-in-up">
           <Content maxWidth="7xl">
             <Header.H2 orientation="center">
               Intuitive Datenvisualisierung
@@ -459,16 +434,11 @@ export default function CloudStrategyPage() {
               </Content.Column>
             </Content.Row>
           </Content>
-        </motion.div>
+        </div>
       </section>
 
       <section className="bg-white py-12 sm:py-16 lg:py-20 px-4 sm:px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
+        <div className="animate-fade-slide-in-up">
           <Content maxWidth="7xl">
             <Content.Row cols={2} alignItems="start">
               <Content.Column>
@@ -645,17 +615,12 @@ export default function CloudStrategyPage() {
               </Content.Column>
             </Content.Row>
           </Content>
-        </motion.div>
+        </div>
       </section>
       <CallToActionSection />
       {/* Services Section */}
       <section className="bg-white py-12 sm:py-16 lg:py-20 px-4 sm:px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
+        <div className="animate-fade-slide-in-up">
           <Content maxWidth="7xl">
             <Header.H3>Unsere Leistungen</Header.H3>
 
@@ -752,7 +717,7 @@ export default function CloudStrategyPage() {
               </Content.Column>
             </Content.Row>
           </Content>
-        </motion.div>
+        </div>
       </section>
     </>
   );

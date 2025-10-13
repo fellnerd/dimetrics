@@ -1,7 +1,14 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { CheckCircle, Target, Zap, Workflow } from "lucide-react";
+// import { motion } from "framer-motion"; // Deaktiviert - Ersetzt durch native Tailwind Animationen
+import {
+  ArrowRight,
+  Check,
+  Target,
+  Workflow,
+  Zap,
+  CheckCircle,
+} from "lucide-react";
 import { GradientHeadline } from "./ui/typography/gradient-headline";
 import { SectionDescription } from "./ui/typography/section-description";
 import { FloatingDecorations } from "./ui/decorations/floating-decorations";
@@ -107,12 +114,8 @@ export default function PartnershipSection() {
               const isEven = index % 2 === 0;
 
               return (
-                <motion.div
+                <div
                   key={step.number}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  viewport={{ once: true }}
                   className={`grid lg:grid-cols-2 gap-12 items-center ${
                     isEven ? "" : "lg:direction-rtl"
                   }`}
@@ -156,7 +159,7 @@ export default function PartnershipSection() {
                       </div>
                     </div>
                   </div>
-                </motion.div>
+                </div>
               );
             })}
           </div>
