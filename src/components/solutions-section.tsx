@@ -72,9 +72,7 @@ export function SolutionsSection() {
       className="py-12 sm:py-16 lg:py-20 px-4 sm:px-6 bg-black"
     >
       <div className="container mx-auto max-w-7xl">
-        <div
-          className="text-center mb-12 sm:mb-16 lg:mb-20"
-        >
+        <div className="text-center mb-12 sm:mb-16 lg:mb-20">
           <div className="relative">
             <GradientHeadline>
               <GradientText gradient="secondary">Lösungen,</GradientText>

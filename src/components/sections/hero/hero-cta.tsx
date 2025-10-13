@@ -18,9 +18,7 @@ export function HeroCTA({
   onSecondaryClick,
 }: HeroCTAProps) {
   return (
-    <div
-      className="flex flex-col sm:flex-row gap-4"
-    >
+    <div className="flex flex-col sm:flex-row gap-4">
       <Button
         variant="ghost"
         size="lg"

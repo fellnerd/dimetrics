@@ -45,9 +45,7 @@ interface HeroKPIsProps {
 
 export function HeroKPIs({ kpis }: HeroKPIsProps) {
   return (
-    <div
-      className="w-full mt-12 lg:absolute lg:bottom-24 lg:right-4 lg:w-[28rem] grid grid-cols-2 gap-3 lg:gap-3 px-6 lg:px-0"
-    >
+    <div className="w-full mt-12 lg:absolute lg:bottom-24 lg:right-4 lg:w-[28rem] grid grid-cols-2 gap-3 lg:gap-3 px-6 lg:px-0">
       {kpis.map((kpi, index) => (
         <div
           key={kpi.label}

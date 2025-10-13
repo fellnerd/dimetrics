@@ -24,9 +24,7 @@ export function HeroSection() {
         <div className="relative z-10 w-full max-w-7xl mx-auto px-6 py-12 sm:py-16 lg:py-32">
           <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             <div className="lg:col-span-7 space-y-8 lg:space-y-12">
-              <div
-                className="space-y-6 lg:space-y-8 bg-gray-900/50 backdrop-blur-sm border border-gray-800/40 rounded-2xl p-6 lg:p-8"
-              >
+              <div className="space-y-6 lg:space-y-8 bg-gray-900/50 backdrop-blur-sm border border-gray-800/40 rounded-2xl p-6 lg:p-8">
                 <HeroTitle
                   primaryText="Systeme verbinden."
                   accentText="Effizienz entfalten."

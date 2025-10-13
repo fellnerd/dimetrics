@@ -14,9 +14,7 @@ export function HeroBackground({
 }: HeroBackgroundProps) {
   return (
     <div className="absolute right-0 top-0 bottom-0 w-full">
-      <div
-        className="relative h-full w-full"
-      >
+      <div className="relative h-full w-full">
         <Image
           src={imageSrc}
           alt={imageAlt}
