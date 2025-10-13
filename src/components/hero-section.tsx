@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion"; // DEAKTIVIERT FÜR FLICKERING TEST
 import {
   HeroTitle,
   HeroDescription,
@@ -24,10 +24,7 @@ export function HeroSection() {
         <div className="relative z-10 w-full max-w-7xl mx-auto px-6 py-12 sm:py-16 lg:py-32">
           <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             <div className="lg:col-span-7 space-y-8 lg:space-y-12">
-              <motion.div
-                initial={{ opacity: 0, x: -40 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
+              <div
                 className="space-y-6 lg:space-y-8 bg-gray-900/50 backdrop-blur-sm border border-gray-800/40 rounded-2xl p-6 lg:p-8"
               >
                 <HeroTitle
@@ -40,7 +37,7 @@ export function HeroSection() {
                   Brücken zwischen Strategie und Technologie für nachhaltigen
                   digitalen Erfolg.
                 </HeroDescription>
-              </motion.div>
+              </div>
 
               <HeroCTA />
 

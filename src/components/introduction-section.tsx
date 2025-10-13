@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion"; // DEAKTIVIERT FÜR FLICKERING TEST
 import { Header } from "./ui/header";
 import Content from "./ui/content/content";
 import Typography from "./ui/typography/typography";
@@ -12,12 +12,7 @@ const IntroductionSection = () => {
       id="about"
       className="bg-white py-12 sm:py-16 lg:py-20 px-4 sm:px-6"
     >
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        viewport={{ once: true }}
-      >
+      <div>
         <Header.H2
           sectionLabel="Systeme verbinden. Effizienz entfalten."
           orientation="center"
@@ -45,7 +40,7 @@ const IntroductionSection = () => {
             </Content.Column>
           </Content.Row>
         </Content>
-      </motion.div>
+      </div>
     </section>
   );
 };

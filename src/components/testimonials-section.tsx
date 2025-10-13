@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion"; // DEAKTIVIERT FÜR FLICKERING TEST
 import { GradientHeadline, GradientText } from "./ui/typography/gradient-headline";
 import { SectionDescription } from "./ui/typography/section-description";
 import { TestimonialCard } from "./sections/testimonials/testimonial-card";
@@ -48,11 +48,7 @@ export function TestimonialsSection() {
   return (
     <section className="bg-gray-950 py-32">
       <div className="max-w-7xl mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
+        <div
           className="text-center mb-20"
         >
           <GradientHeadline>
@@ -67,7 +63,7 @@ export function TestimonialsSection() {
             Unsere Partner vertrauen auf unsere Expertise für ihre digitale
             Transformation.
           </SectionDescription>
-        </motion.div>
+        </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {testimonials.map((testimonial, index) => (

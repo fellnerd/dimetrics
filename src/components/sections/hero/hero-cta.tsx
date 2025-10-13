@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion"; // DEAKTIVIERT FÜR FLICKERING TEST
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
@@ -18,10 +18,7 @@ export function HeroCTA({
   onSecondaryClick,
 }: HeroCTAProps) {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: 0.5 }}
+    <div
       className="flex flex-col sm:flex-row gap-4"
     >
       <Button
@@ -41,6 +38,6 @@ export function HeroCTA({
       >
         {secondaryButtonText}
       </Button>
-    </motion.div>
+    </div>
   );
 }
