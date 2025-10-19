@@ -63,7 +63,7 @@ export function ServiceTabContent({
   return (
     <div
       key={service.title}
-      className={`absolute inset-0 ${
+      className={`${
         activeTab === index ? "block animate-fade-slide-in-right" : "hidden"
       }`}
     >

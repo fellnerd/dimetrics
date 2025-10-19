@@ -210,11 +210,11 @@ export default function ContactPage() {
                   </Typography.SectionTitle>
                   <div className="text-xl font-bold text-gray-900">
                     <div>Geschäftsführung</div>
-                    <div className="text-lg text-gray-600 mt-2">
+                    <div className="text-lg text-gray-600 mt-1">
                       Strategie & Consulting
                     </div>
                   </div>
-                  <div className="mt-3">
+                  <div className="mt-2">
                     <a
                       href="tel:+436641969013"
                       className="block text-lg font-medium text-[#3d55e2] hover:text-[#5facdb] transition-colors duration-300"
@@ -223,7 +223,7 @@ export default function ContactPage() {
                     </a>
                     <a
                       href="mailto:d.fellner@dimetrics.io"
-                      className="block mt-1 text-lg font-medium text-[#3d55e2] hover:text-[#5facdb] transition-colors duration-300"
+                      className="block text-lg font-medium text-[#3d55e2] hover:text-[#5facdb] transition-colors duration-300"
                     >
                       d.fellner@dimetrics.io
                     </a>
@@ -239,11 +239,11 @@ export default function ContactPage() {
                   </Typography.SectionTitle>
                   <div className="text-xl font-bold text-gray-900">
                     <div>Digital Marketing</div>
-                    <div className="text-lg text-gray-600 mt-2">
+                    <div className="text-lg text-gray-600 mt-1">
                       Solution Specialist
                     </div>
                   </div>
-                  <div className="mt-3">
+                  <div className="mt-2">
                     <a
                       href="tel:+4368120671691"
                       className="block text-lg font-medium text-[#3d55e2] hover:text-[#5facdb] transition-colors duration-300"
@@ -252,7 +252,7 @@ export default function ContactPage() {
                     </a>
                     <a
                       href="mailto:anna@dimetrics.io"
-                      className="block mt-1 text-lg font-medium text-[#3d55e2] hover:text-[#5facdb] transition-colors duration-300"
+                      className="block text-lg font-medium text-[#3d55e2] hover:text-[#5facdb] transition-colors duration-300"
                     >
                       anna@dimetrics.io
                     </a>
@@ -268,11 +268,11 @@ export default function ContactPage() {
                   </Typography.SectionTitle>
                   <div className="text-xl font-bold text-gray-900">
                     <div>Operation Consultant</div>
-                    <div className="text-lg text-gray-600 mt-2">
+                    <div className="text-lg text-gray-600 mt-1">
                       Business Operations
                     </div>
                   </div>
-                  <div className="mt-3">
+                  <div className="mt-2">
                     <a
                       href="tel:+436507220808"
                       className="block text-lg font-medium text-[#3d55e2] hover:text-[#5facdb] transition-colors duration-300"
@@ -281,7 +281,7 @@ export default function ContactPage() {
                     </a>
                     <a
                       href="mailto:j.silva@dimetrics.io"
-                      className="block mt-1 text-lg font-medium text-[#3d55e2] hover:text-[#5facdb] transition-colors duration-300"
+                      className="block text-lg font-medium text-[#3d55e2] hover:text-[#5facdb] transition-colors duration-300"
                     >
                       j.silva@dimetrics.io
                     </a>
@@ -300,11 +300,11 @@ export default function ContactPage() {
                   </Typography.SectionTitle>
                   <div className="text-xl font-bold text-gray-900">
                     <div>Technical Support</div>
-                    <div className="text-lg text-gray-600 mt-2">
+                    <div className="text-lg text-gray-600 mt-1">
                       Technische Unterstützung
                     </div>
                   </div>
-                  <div className="mt-3">
+                  <div className="mt-2">
                     <a
                       href="mailto:support@dimetrics.io"
                       className="block text-lg font-medium text-[#3d55e2] hover:text-[#5facdb] transition-colors duration-300"
@@ -323,11 +323,11 @@ export default function ContactPage() {
                   </Typography.SectionTitle>
                   <div className="text-xl font-bold text-gray-900">
                     <div>Dimetrics Sales</div>
-                    <div className="text-lg text-gray-600 mt-2">
+                    <div className="text-lg text-gray-600 mt-1">
                       Vertrieb & Akquise
                     </div>
                   </div>
-                  <div className="mt-3">
+                  <div className="mt-2">
                     <a
                       href="tel:+4366488614626"
                       className="block text-lg font-medium text-[#3d55e2] hover:text-[#5facdb] transition-colors duration-300"

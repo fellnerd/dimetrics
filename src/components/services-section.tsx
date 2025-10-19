@@ -78,7 +78,7 @@ export function ServicesSection({ title }: ServicesSectionProps) {
           />
 
           {/* Tab Content */}
-          <div className="relative min-h-[500px] sm:min-h-[600px] lg:min-h-[650px]">
+          <div className="relative">
             {services.map((service, index) => (
               <ServiceTabContent
                 key={service.title}

@@ -22,10 +22,10 @@ export function Navigation() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-3 ${
         isScrolled
-          ? "bg-gray-900/70 backdrop-blur-md border-b border-gray-800/60 py-1.5"
-          : "bg-gray-900/50 backdrop-blur-sm border-b border-gray-800/40 py-3"
+          ? "bg-gray-900/70 backdrop-blur-md border-b border-gray-800/60"
+          : "bg-gray-900/50 backdrop-blur-sm border-b border-gray-800/40"
       }`}
     >
       <div className="max-w-7xl mx-auto px-6">
@@ -39,15 +39,9 @@ export function Navigation() {
               <img
                 src="/images/logos/dimetrics-logo.png"
                 alt="Dimetrics"
-                className={`object-contain transition-all duration-300 ${
-                  isScrolled ? "w-6 h-6" : "w-8 h-8"
-                }`}
+                className="object-contain transition-all duration-300 w-8 h-8"
               />
-              <span
-                className={`font-light text-white transition-all duration-300 ${
-                  isScrolled ? "text-sm" : "text-base"
-                }`}
-              >
+              <span className="font-light text-white transition-all duration-300 text-base">
                 dimetrics
               </span>
             </Link>
@@ -57,50 +51,39 @@ export function Navigation() {
           <div className="hidden md:flex items-center space-x-10 animate-fade-slide-in-right">
             <a
               href="/#services"
-              className={`text-gray-300 hover:text-white transition-all duration-300 font-light ${
-                isScrolled ? "text-sm" : "text-base"
-              }`}
+              className="text-gray-300 hover:text-white transition-all duration-300 font-light text-base"
             >
               Unsere Kompetenzen
             </a>
             <a
               href="/#solutions"
-              className={`text-gray-300 hover:text-white transition-all duration-300 font-light ${
-                isScrolled ? "text-sm" : "text-base"
-              }`}
+              className="text-gray-300 hover:text-white transition-all duration-300 font-light text-base"
             >
               Lösungen
             </a>
             <a
+              href="/business-process-automation-platform"
+              className="text-gray-300 hover:text-white transition-all duration-300 font-light text-base"
+            >
+              Plattform
+            </a>
+            <a
               href="/about"
-              className={`text-gray-300 hover:text-white transition-all duration-300 font-light ${
-                isScrolled ? "text-sm" : "text-base"
-              }`}
+              className="text-gray-300 hover:text-white transition-all duration-300 font-light text-base"
             >
               Wer wir sind
             </a>
             <a
               href="/contact-us"
-              className={`text-gray-300 hover:text-white transition-all duration-300 font-light ${
-                isScrolled ? "text-sm" : "text-base"
-              }`}
+              className="text-gray-300 hover:text-white transition-all duration-300 font-light text-base"
             >
               Kontakt
             </a>
-            {isScrolled ? (
-              <Link
-                href="/contact-us"
-                className="text-gray-300 hover:text-white transition-all duration-300 font-light text-sm"
-              >
+            <Link href="/contact-us">
+              <Button className="bg-gradient-to-r from-[#3d55e2] to-[#5facdb] hover:from-[#5facdb] hover:to-[#A100FF] text-white font-light transition-all duration-300 text-base px-6 py-2">
                 Beratung vereinbaren
-              </Link>
-            ) : (
-              <Link href="/contact-us">
-                <Button className="bg-gradient-to-r from-[#3d55e2] to-[#5facdb] hover:from-[#5facdb] hover:to-[#A100FF] text-white font-light transition-all duration-300 text-base px-6 py-2">
-                  Beratung vereinbaren
-                </Button>
-              </Link>
-            )}
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}

@@ -51,16 +51,18 @@ export function PremiumButton({
   const baseClasses = `group inline-flex items-center font-medium transition-all duration-300 hover:scale-105 ${variants[variant]} ${sizes[size]} ${className}`;
 
   const content = (
-    <>
+    <div className="flex items-center">
       <span className="relative text-white group-hover:!text-white">
         {children}
       </span>
       {showArrow && (
-        <ArrowRight
-          className={`${iconSizes[size]} text-white group-hover:!text-white group-hover:translate-x-1 transition-transform duration-300`}
-        />
+        <span>
+          <ArrowRight
+            className={`${iconSizes[size]} text-white group-hover:!text-white group-hover:translate-x-1 transition-transform duration-300`}
+          />
+        </span>
       )}
-    </>
+    </div>
   );
 
   if (href) {

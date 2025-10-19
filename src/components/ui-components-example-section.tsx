@@ -20,8 +20,7 @@ const UIComponentsSection = () => {
 
   return (
     <section className="bg-white py-24">
-      <div
-      >
+      <div>
         <Content maxWidth="7xl">
           {/* Header */}
           <Content.Row cols={1}>

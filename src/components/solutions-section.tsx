@@ -36,7 +36,7 @@ export function SolutionsSection() {
       title: "Customer Relationship Management Tool",
       description:
         "Dimetrics CRM optimiert Vertriebsteams mit Office Exchange Integration, smarten Reporting-Tools und automatisierter Interaktionserfassung – für effiziente Lead-Qualifizierung und höhere Produktivität.",
-      image: "/images/projects/customer-crm.png",
+      image: "/images/projects/crm2.png",
       link: "https://dimetrics.io/customer-relationship-management-tool/",
       category: "CRM & Vertrieb",
     },
