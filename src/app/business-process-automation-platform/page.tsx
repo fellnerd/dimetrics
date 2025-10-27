@@ -55,11 +55,11 @@ export default function CloudStrategyPage() {
           {/* Title - Desktop positioned absolutely */}
           <div className="hidden lg:block absolute lg:top-32 lg:left-24 lg:w-[36rem] z-20">
             <div className="space-y-6   rounded-2xl p-6 max-w-2xl animate-fade-slide-in-left-delayed">
-              <h1 className="font-serif text-4xl xl:text-5xl font-normal leading-tight text-left tracking-tight">
-                <span className="block text-white mb-2 font-medium">
+              <h1 className="text-4xl xl:text-5xl font-bold leading-tight text-left tracking-tight">
+                <span className="block text-white mb-2 font-bold">
                   Business Process Automation auf einer
                 </span>
-                <span className="block text-[#5facdb] mb-3 font-light italic">
+                <span className="block text-[#5facdb] mb-3 font-bold">
                   Plattform
                 </span>
               </h1>

@@ -8,7 +8,7 @@ interface HeroBackgroundProps {
 }
 
 export function HeroBackgroundLight({
-  imageSrc = "/images/bh01.png",
+  imageSrc = "/images/hero/bg-hero.png",
   imageAlt = "Business Solutions Overview",
 }: HeroBackgroundProps) {
   return (

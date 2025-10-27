@@ -9,13 +9,11 @@ interface HeroTitleProps {
 
 export function HeroTitleLight({ primaryText, accentText }: HeroTitleProps) {
   return (
-    <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-normal leading-tight text-left tracking-tight">
+    <h1 className="font-sans text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-normal leading-tight text-left tracking-tight">
       <span className="block text-gray-900 mb-2 font-medium">
         {primaryText}
       </span>
-      <span className="block text-gray-700 font-light italic">
-        {accentText}
-      </span>
+      <span className="block text-gray-700 font-light">{accentText}</span>
     </h1>
   );
 }
