@@ -100,8 +100,46 @@ export const metadata: Metadata = {
   category: "Business Consulting",
   classification: "Digital Transformation Services Austria",
   icons: {
-    icon: "/favicon.ico",
-    apple: "/apple-touch-icon.png",
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/fav.ico/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/fav.ico/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/fav.ico/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+    ],
+    apple: [
+      {
+        url: "/fav.ico/apple-icon-180x180.png",
+        sizes: "180x180",
+        type: "image/png",
+      },
+      {
+        url: "/fav.ico/apple-icon-152x152.png",
+        sizes: "152x152",
+        type: "image/png",
+      },
+      {
+        url: "/fav.ico/apple-icon-144x144.png",
+        sizes: "144x144",
+        type: "image/png",
+      },
+      {
+        url: "/fav.ico/apple-icon-120x120.png",
+        sizes: "120x120",
+        type: "image/png",
+      },
+      {
+        url: "/fav.ico/apple-icon-114x114.png",
+        sizes: "114x114",
+        type: "image/png",
+      },
+    ],
+    other: [
+      {
+        rel: "mask-icon",
+        url: "/fav.ico/safari-pinned-tab.svg",
+        color: "#A100FF",
+      },
+    ],
   },
   other: {
     "geo.region": "AT-2", // Kärnten, Austria
@@ -148,6 +186,84 @@ export default function RootLayout({
         {/* DNS Prefetch für externe Ressourcen */}
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+
+        {/* Favicon und App Icons */}
+        <link
+          rel="apple-touch-icon"
+          sizes="57x57"
+          href="/fav.ico/apple-icon-57x57.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="60x60"
+          href="/fav.ico/apple-icon-60x60.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="72x72"
+          href="/fav.ico/apple-icon-72x72.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="76x76"
+          href="/fav.ico/apple-icon-76x76.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="114x114"
+          href="/fav.ico/apple-icon-114x114.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="120x120"
+          href="/fav.ico/apple-icon-120x120.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="144x144"
+          href="/fav.ico/apple-icon-144x144.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="/fav.ico/apple-icon-152x152.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/fav.ico/apple-icon-180x180.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="192x192"
+          href="/fav.ico/android-icon-192x192.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/fav.ico/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="96x96"
+          href="/fav.ico/favicon-96x96.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/fav.ico/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/fav.ico/manifest.json" />
+        <meta name="msapplication-TileColor" content="#A100FF" />
+        <meta
+          name="msapplication-TileImage"
+          content="/fav.ico/ms-icon-144x144.png"
+        />
+        <meta name="theme-color" content="#A100FF" />
 
         {/* Viewport Meta für Performance */}
         <meta
