@@ -2,9 +2,10 @@
 
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-// import { motion } from "framer-motion"; // ERSETZT DURCH NATIVE TAILWIND ANIMATIONEN
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
+// import { motion } from "framer-motion"; // ERSETZT DURCH NATIVE TAILWIND ANIMATIONEN
 
 export function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -36,10 +37,14 @@ export function Navigation() {
               href="/"
               className="flex items-center space-x-3 hover:opacity-80 transition-all duration-300"
             >
-              <img
+              <Image
                 src="/images/logos/dimetrics-logo.png"
                 alt="Dimetrics"
-                className="object-contain transition-all duration-300 w-8 h-8"
+                width={32}
+                height={32}
+                className="object-contain transition-all duration-300"
+                priority={false}
+                sizes="32px"
               />
               <span className="font-light text-white transition-all duration-300 text-base">
                 dimetrics

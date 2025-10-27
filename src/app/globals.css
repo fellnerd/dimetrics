@@ -1,5 +1,22 @@
 @import "tailwindcss";
 
+/* Critical CSS für Performance */
+html {
+  font-display: swap;
+}
+
+/* CSS Containment für bessere Performance */
+.container {
+  contain: layout style paint;
+}
+
+/* Will-change für Animationen */
+.animate-fade-slide-in-left,
+.animate-fade-slide-in-right,
+.animate-fade-slide-in-up {
+  will-change: transform, opacity;
+}
+
 /* Native Tailwind Animation Replacements für Framer Motion */
 @keyframes fade-in {
   from {
