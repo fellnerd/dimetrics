@@ -116,6 +116,53 @@ const nextConfig: NextConfig = {
       },
     ];
   },
-};
 
-export default nextConfig;
+  // SEO-Redirects für deutsche URLs
+  async redirects() {
+    return [
+      // Deutsche URL-Umleitungen
+      {
+        source: "/ueber-dimetrics",
+        destination: "/about",
+        permanent: true, // 301 Redirect für SEO
+      },
+      {
+        source: "/kontakt",
+        destination: "/contact-us",
+        permanent: true, // 301 Redirect für SEO
+      },
+      // Alternative Schreibweisen
+      {
+        source: "/über-dimetrics",
+        destination: "/about",
+        permanent: true,
+      },
+      {
+        source: "/ueber-uns",
+        destination: "/about",
+        permanent: true,
+      },
+      {
+        source: "/über-uns",
+        destination: "/about",
+        permanent: true,
+      },
+      {
+        source: "/kontakt-uns",
+        destination: "/contact-us",
+        permanent: true,
+      },
+      // Legacy URLs falls vorhanden
+      {
+        source: "/home",
+        destination: "/",
+        permanent: true,
+      },
+      {
+        source: "/index",
+        destination: "/",
+        permanent: true,
+      },
+    ];
+  },
+};
