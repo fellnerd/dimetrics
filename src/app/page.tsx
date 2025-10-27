@@ -1,5 +1,5 @@
 import { PageLayout } from "@/components/page-layout";
-import { HeroSection } from "@/components/hero-section";
+import { HeroSectionLight } from "@/components/hero-section-light";
 import { ServicesSection } from "@/components/services-section";
 import { SolutionsSection } from "@/components/solutions-section";
 import { TestimonialsSection } from "@/components/testimonials-section";
@@ -9,8 +9,8 @@ import IntroductionSection from "../components/introduction-section";
 
 export default function Home() {
   return (
-    <PageLayout backgroundColor="black" textColor="white">
-      <HeroSection />
+    <PageLayout backgroundColor="white" textColor="black">
+      <HeroSectionLight />
       <IntroductionSection />
       <ServicesSection />
       <SolutionsSection />

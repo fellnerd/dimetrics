@@ -68,6 +68,7 @@ export default {
       fontFamily: {
         // Accenture Typography - Modern Sans-Serif
         sans: [
+          "var(--font-inter)",
           "Inter",
           "system-ui",
           "-apple-system",
@@ -77,6 +78,26 @@ export default {
           "Helvetica",
           "Arial",
           "sans-serif",
+        ],
+        // Display Font for Headlines
+        display: [
+          "var(--font-outfit)",
+          "Outfit",
+          "Inter",
+          "system-ui",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "Segoe UI",
+          "Roboto",
+          "sans-serif",
+        ],
+        // Elegant Serif for Premium Headlines
+        serif: [
+          "var(--font-playfair)",
+          "Playfair Display",
+          "Georgia",
+          "Times New Roman",
+          "serif",
         ],
         heading: ["Inter", "system-ui", "sans-serif"],
       },

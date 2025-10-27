@@ -12,19 +12,19 @@ const IntroductionSection = () => {
       id="about"
       className="bg-white py-12 sm:py-16 lg:py-20 px-4 sm:px-6"
     >
-      <div className="animate-fade-slide-in-up">
-        <Header.H2
+      <div className="max-w-7xl mx-auto">
+        <Header.H3
           sectionLabel="Systeme verbinden. Effizienz entfalten."
           orientation="center"
         >
           Ihre Brücke zwischen Strategie und Technologie für nachhaltigen
           digitalen Erfolg.​
-        </Header.H2>
+        </Header.H3>
 
         <Content>
           <Content.Row cols={1} gap="lg">
             <Content.Column>
-              <Typography.SubHeadline>
+              <Typography.Lead>
                 Dimetrics ist Ihr Experte für digitale Transformation und
                 maßgeschneiderte Geschäftsanwendungen. Wir kombinieren tief
                 gehende Expertise in der Digital Excellence Beratung mit
@@ -35,7 +35,7 @@ const IntroductionSection = () => {
                 Low-Code-Entwicklung bis hin zur nahtlosen Integration Ihrer
                 Daten und Prozesse – wir schaffen die Grundlage für nachhaltigen
                 Erfolg im digitalen Zeitalter.
-              </Typography.SubHeadline>
+              </Typography.Lead>
               <div className="-bottom-2 left-0 w-80 h-0.5 bg-gradient-to-r from-[#5facdb] to-transparent opacity-60"></div>
             </Content.Column>
           </Content.Row>

@@ -22,7 +22,7 @@ export function ServicesSection({ title }: ServicesSectionProps) {
       fullTitle: "Cloud Strategie & Beratung",
       description:
         "Eine durchdachte Cloud-Strategie ist der Schlüssel zu mehr Flexibilität, Skalierbarkeit und Effizienz. Wir unterstützen Sie dabei, die richtige Cloud-Lösung für Ihr Unternehmen zu finden – ob Public, Private oder Hybrid Cloud.Unsere Experten analysieren Ihre bestehenden IT-Strukturen, entwickeln eine maßgeschneiderte Migrationsstrategie und begleiten Sie von der Planung über die Umsetzung bis hin zum laufenden Betrieb. Dabei setzen wir auf sichere, performante und zukunftssichere Architekturen, die sich nahtlos in Ihre Geschäftsprozesse integrieren lassen.",
-      backgroundImage: "/images/services/cloud-strategy-bg.png",
+      backgroundImage: "/images/services/cloud_ai_consulting.png",
       icon: "/images/services/cloud-strategy.svg",
       href: "/services/cloud-strategy",
     },

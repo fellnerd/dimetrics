@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Inter, Outfit, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import StructuredData from "../components/structured-data";
 
@@ -16,6 +16,32 @@ const inter = Inter({
     "Roboto",
     "sans-serif",
   ],
+  adjustFontFallback: true,
+});
+
+const outfit = Outfit({
+  subsets: ["latin"],
+  variable: "--font-outfit",
+  display: "swap",
+  preload: true,
+  fallback: [
+    "Inter",
+    "system-ui",
+    "-apple-system",
+    "BlinkMacSystemFont",
+    "Segoe UI",
+    "Roboto",
+    "sans-serif",
+  ],
+  adjustFontFallback: true,
+});
+
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+  display: "swap",
+  preload: true,
+  fallback: ["Georgia", "Times New Roman", "serif"],
   adjustFontFallback: true,
 });
 
@@ -164,7 +190,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="de" className={inter.variable}>
+    <html
+      lang="de"
+      className={`${inter.variable} ${outfit.variable} ${playfair.variable}`}
+    >
       <head>
         {/* Critical Resource Hints */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />

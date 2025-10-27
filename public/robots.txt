@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://dimetrics.io/sitemap.xml
+
+# Block demo and development pages from indexing
+Disallow: /hero-light-demo
+Disallow: /typography
+Disallow: /ui-components

@@ -2,6 +2,16 @@
 export { HeroTitle, HeroDescription, HeroKPIs } from "./hero/hero-content";
 export { HeroCTA } from "./hero/hero-cta";
 export { HeroBackground } from "./hero/hero-background";
+
+// Hero Section Light Components
+export {
+  HeroTitleLight,
+  HeroDescriptionLight,
+  HeroKPIsLight,
+} from "./hero/hero-content-light";
+export { HeroCTALight } from "./hero/hero-cta-light";
+export { HeroBackgroundLight } from "./hero/hero-background-light";
+
 export { HeroSectionSplit } from "./hero-section-split";
 
 // Solutions Section Components

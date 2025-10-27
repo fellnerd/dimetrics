@@ -285,7 +285,7 @@ export default function CloudStrategyPage() {
       <section className="bg-white py-12 sm:py-16 lg:py-20 px-4 sm:px-6">
         <div className="animate-fade-slide-in-up">
           <Content maxWidth="7xl">
-            <Content.Row cols={2} alignItems="start">
+            <Content.Row cols={2} alignItems="start" gap="xl">
               <Content.Column>
                 <Header.H2>Build Powerful Dynamic Services</Header.H2>
                 <div className="space-y-6">
@@ -343,7 +343,7 @@ export default function CloudStrategyPage() {
                   </Typography.Body>
 
                   <Typography.SubHeadline className="text-lg">
-                    Geschäftsprozesse effizient & mühelos steuern
+                    Datenmodelle per Drag & Drop erstellen
                   </Typography.SubHeadline>
                   <Typography.Body className="text-lg">
                     Die integrierte Drag & Drop Funktionalität ermöglicht es
@@ -440,7 +440,7 @@ export default function CloudStrategyPage() {
       <section className="bg-white py-12 sm:py-16 lg:py-20 px-4 sm:px-6">
         <div className="animate-fade-slide-in-up">
           <Content maxWidth="7xl">
-            <Content.Row cols={2} alignItems="start">
+            <Content.Row cols={2} alignItems="start" gap="xl">
               <Content.Column>
                 <Header.H3>
                   Mit Dimetrics Power BI Berichte lizenzfrei teilen
