@@ -23,10 +23,10 @@ export default function CloudStrategyPage() {
         imageWidth={700}
         imageHeight={800}
         title="Lösungen schaffen, die heute wirken und morgen noch stärker machen."
-        description="Dimetrics ist Ihr persönlicher Partner für digitale Effizienz im Unternehmen.  Wir bieten innovative Lösungen, die Unternehmen effizienter, flexibler und datengetriebener machen. Von strategischer Digitalberatung über agile Low- Code-Entwicklung bis hin zur nahtlosen Integration Ihrer Daten und Prozesse auf unserer eigenentwickelten Dimetrics Plattform."
+        description="Dimetrics ist Ihr persönlicher Partner für digitale Effizienz im Unternehmen. Wir bieten innovative Lösungen, die Unternehmen effizienter, flexibler und datengetriebener machen. Von strategischer Digitalberatung über agile Low- Code-Entwicklung bis hin zur nahtlosen Integration Ihrer Daten und Prozesse auf unserer eigenentwickelten Dimetrics Plattform."
         backgroundColor="black"
         textColor="white"
-        subText="- Daniel Fellner, Gründer -"
+        subText="- Daniel Fellner, Gründer Dimetrics -"
       />
 
       {/* Main Content Section */}
