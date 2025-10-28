@@ -3,6 +3,14 @@ import { Inter, Outfit, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import StructuredData from "../components/structured-data";
 
+const shareImage = {
+  url: "/images/logos/dimetrics-logo.png",
+  width: 152,
+  height: 150,
+  alt: "dimetrics.io Logo",
+  type: "image/png",
+};
+
 const inter = Inter({
   subsets: ["latin", "latin-ext"],
   variable: "--font-inter",
@@ -92,21 +100,15 @@ export const metadata: Metadata = {
     type: "website",
     locale: "de_AT",
     url: "https://dimetrics.io",
-    images: [
-      {
-        url: "/images/hero/bg-hero.png",
-        width: 1200,
-        height: 630,
-        alt: "dimetrics.io - Digitale Transformation und Cloud Migration Österreich",
-      },
-    ],
+    images: [shareImage],
   },
   twitter: {
     card: "summary_large_image",
     title: "Systeme verbinden. Effizienz entfalten. | dimetrics.io",
     description:
       "⚡ Microsoft Power Platform, Azure Cloud & Enterprise Integration in Österreich. 50+ erfolgreiche Projekte.",
-    images: ["/images/hero/bg-hero.png"],
+    images: [shareImage.url],
+    site: "@dimetrics_io",
     creator: "@dimetrics_io",
   },
   robots: {
