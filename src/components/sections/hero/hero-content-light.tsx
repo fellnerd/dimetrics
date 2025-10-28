@@ -50,7 +50,7 @@ export function HeroKPIsLight({ kpis }: HeroKPIsProps) {
           <div className="text-xl lg:text-2xl font-semibold text-gray-900 mb-1">
             {kpi.number}
           </div>
-          <div className="text-sm text-gray-600 font-normal leading-tight">
+          <div className="text-xs sm:text-sm text-gray-600 font-normal leading-tight break-words">
             {kpi.label}
           </div>
         </div>

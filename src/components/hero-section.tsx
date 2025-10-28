@@ -11,10 +11,10 @@ import { HeroBackground } from "./sections/hero/hero-background";
 
 export function HeroSection() {
   const kpis = [
-    { number: "50+", label: "Projekte erfolgreich umgesetzt" },
-    { number: "95%", label: "Kundenzufriedenheit" },
-    { number: "24/7", label: "Support & Monitoring" },
-    { number: "15+", label: "Jahre Branchenerfahrung" },
+    { number: "50+", label: "Projekte umgesetzt" },
+    { number: "95%", label: "Kunden-Score" },
+    { number: "24/7", label: "Rund-um-Support" },
+    { number: "15+", label: "Branchen-Erfahrung" },
   ];
 
   return (
