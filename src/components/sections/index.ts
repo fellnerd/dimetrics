@@ -18,6 +18,7 @@ export { HeroSectionSplit } from "./hero-section-split";
 export { SolutionCard } from "./solutions/solution-card";
 export { CustomerLogos } from "./solutions/customer-logos";
 export { SolutionsCTA } from "./solutions/solutions-cta";
+export { SolutionKPIGrid } from "./solutions/solution-kpi-grid";
 
 // Services Section Components
 export { ServicesHeader } from "./services/services-header";

@@ -29,13 +29,13 @@ export function ServiceTabNavigation({
   onTabChange,
 }: ServiceTabNavigationProps) {
   return (
-    <div className="border-b border-gray-200 mb-6 sm:mb-8 lg:mb-12">
-      <nav className="flex space-x-2 sm:space-x-4 lg:space-x-8 overflow-x-auto pb-1 scrollbar-hide">
+    <div className="border-b border-gray-200 mb-6 sm:mb-8 lg:mb-0 lg:border-b-0 lg:sticky lg:top-32">
+      <nav className="flex space-x-2 sm:space-x-4 overflow-x-auto pb-1 scrollbar-hide lg:flex-col lg:space-x-0 lg:space-y-2 lg:overflow-visible lg:pb-0">
         {services.map((service, index) => (
           <button
             key={service.title}
             onClick={() => onTabChange(index)}
-            className={`pb-3 sm:pb-4 px-2 sm:px-1 whitespace-nowrap text-xs sm:text-base lg:text-lg font-medium transition-all duration-300 border-b-2 flex-shrink-0 ${
+            className={`pb-3 sm:pb-4 px-2 sm:px-1 whitespace-nowrap text-xs sm:text-base lg:text-lg font-medium transition-all duration-300 border-b-2 flex-shrink-0 lg:border-b-0 lg:border-l-2 lg:px-4 lg:text-left lg:whitespace-normal ${
               activeTab === index
                 ? "border-[#A100FF] text-[#A100FF]"
                 : "border-transparent text-gray-500 hover:text-gray-700 hover:border-gray-300"

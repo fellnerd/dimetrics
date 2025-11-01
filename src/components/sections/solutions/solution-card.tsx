@@ -5,6 +5,7 @@ import { ExternalLink } from "lucide-react";
 import Image from "next/image";
 import { CategoryBadge } from "@/components/ui/badges/category-badge";
 import { AccentLine } from "@/components/ui/decorations/accent-line";
+import Link from "next/link";
 
 interface Solution {
   title: string;
@@ -81,20 +82,31 @@ export function SolutionCard({ solution, index }: SolutionCardProps) {
 
         {/* Enhanced CTA Button */}
         <div className="pt-8">
-          <a
-            href={solution.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#3d55e2]/10 to-[#5facdb]/10 backdrop-blur-sm border border-[#5facdb]/30 rounded-xl hover:from-[#3d55e2]/20 hover:to-[#5facdb]/20 hover:border-[#5facdb]/50 transition-all duration-500 overflow-hidden"
-          >
-            {/* Button background animation */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[#3d55e2] to-[#5facdb] opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
-
-            <span className="relative text-[#5facdb] group-hover:text-white transition-colors duration-300 font-semibold text-lg">
-              Mehr erfahren
-            </span>
-            <ExternalLink className="relative ml-3 h-5 w-5 text-[#5facdb] group-hover:text-white transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300" />
-          </a>
+          {solution.link.startsWith("http") ? (
+            <a
+              href={solution.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#3d55e2]/10 to-[#5facdb]/10 backdrop-blur-sm border border-[#5facdb]/30 rounded-xl hover:from-[#3d55e2]/20 hover:to-[#5facdb]/20 hover:border-[#5facdb]/50 transition-all duration-500 overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-[#3d55e2] to-[#5facdb] opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
+              <span className="relative text-[#5facdb] group-hover:text-white transition-colors duration-300 font-semibold text-lg">
+                Mehr erfahren
+              </span>
+              <ExternalLink className="relative ml-3 h-5 w-5 text-[#5facdb] group-hover:text-white transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300" />
+            </a>
+          ) : (
+            <Link
+              href={solution.link}
+              className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-[#3d55e2]/10 to-[#5facdb]/10 backdrop-blur-sm border border-[#5facdb]/30 rounded-xl hover:from-[#3d55e2]/20 hover:to-[#5facdb]/20 hover:border-[#5facdb]/50 transition-all duration-500 overflow-hidden"
+            >
+              <div className="absolute inset-0 bg-gradient-to-r from-[#3d55e2] to-[#5facdb] opacity-0 group-hover:opacity-10 transition-opacity duration-500"></div>
+              <span className="relative text-[#5facdb] group-hover:text-white transition-colors duration-300 font-semibold text-lg">
+                Mehr erfahren
+              </span>
+              <ExternalLink className="relative ml-3 h-5 w-5 text-[#5facdb] group-hover:text-white transform group-hover:translate-x-1 group-hover:-translate-y-1 transition-all duration-300" />
+            </Link>
+          )}
         </div>
       </div>
     </div>

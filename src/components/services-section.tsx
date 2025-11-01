@@ -18,7 +18,7 @@ export function ServicesSection({ title }: ServicesSectionProps) {
   const services = [
     {
       title: "AI Cloud",
-      subtitle: "Take the world by cloud",
+      subtitle: "Skalierbare Cloud Intelligence",
       fullTitle: "Cloud Strategie & Beratung",
       description:
         "Eine durchdachte Cloud-Strategie ist der Schlüssel zu mehr Flexibilität, Skalierbarkeit und Effizienz. Wir unterstützen Sie dabei, die richtige Cloud-Lösung für Ihr Unternehmen zu finden – ob Public, Private oder Hybrid Cloud.Unsere Experten analysieren Ihre bestehenden IT-Strukturen, entwickeln eine maßgeschneiderte Migrationsstrategie und begleiten Sie von der Planung über die Umsetzung bis hin zum laufenden Betrieb. Dabei setzen wir auf sichere, performante und zukunftssichere Architekturen, die sich nahtlos in Ihre Geschäftsprozesse integrieren lassen.",
@@ -71,22 +71,24 @@ export function ServicesSection({ title }: ServicesSectionProps) {
       <div className="max-w-7xl mx-auto">
         <div className="animate-fade-slide-in-up">
           <ServicesHeader title={title} />
-          <ServiceTabNavigation
-            services={services}
-            activeTab={activeTab}
-            onTabChange={setActiveTab}
-          />
+          <div className="mt-8 lg:mt-12 lg:grid lg:grid-cols-[minmax(220px,280px)_1fr] lg:items-start lg:gap-12">
+            <ServiceTabNavigation
+              services={services}
+              activeTab={activeTab}
+              onTabChange={setActiveTab}
+            />
 
-          {/* Tab Content */}
-          <div className="relative">
-            {services.map((service, index) => (
-              <ServiceTabContent
-                key={service.title}
-                service={service}
-                index={index}
-                activeTab={activeTab}
-              />
-            ))}
+            {/* Tab Content */}
+            <div className="relative">
+              {services.map((service, index) => (
+                <ServiceTabContent
+                  key={service.title}
+                  service={service}
+                  index={index}
+                  activeTab={activeTab}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </div>

@@ -21,7 +21,7 @@ export function SolutionsSection() {
       description:
         "Das Tool optimiert Arbeitsabläufe, beschleunigt Prozesse und liefert Echtzeit-Insights. Die Power BI-Integration bietet den Mitarbeitern Transparenz und interaktive Steuerung – für smartere Entscheidungen und maximale Effizienz.",
       image: "/images/projects/projektmanagement-tool.png",
-      link: "https://dimetrics.io/projektmanagement-system-inkl-power-bi/",
+      link: "/solutions/projektmanagement-system-inkl-power-bi",
       category: "Projektmanagement",
     },
     {
@@ -29,7 +29,7 @@ export function SolutionsSection() {
       description:
         "Dimetrics Cashback ermöglicht der WKO Kärnten die digitale Verarbeitung von 15.000+ Rechnungseinreichungen und optimiert den Abwicklungsprozess – mit 8 erfolgreichen Aktionen in Klagenfurt, Villach und Kötschach-Mauthen.",
       image: "/images/projects/wko-cashback.png",
-      link: "https://dimetrics.io/wko-cashback-aktion/",
+      link: "/solutions/wko-cashback-aktion",
       category: "Prozessautomatisierung",
     },
     {
@@ -37,7 +37,7 @@ export function SolutionsSection() {
       description:
         "Dimetrics CRM optimiert Vertriebsteams mit Office Exchange Integration, smarten Reporting-Tools und automatisierter Interaktionserfassung – für effiziente Lead-Qualifizierung und höhere Produktivität.",
       image: "/images/projects/crm2.png",
-      link: "https://dimetrics.io/customer-relationship-management-tool/",
+      link: "/solutions/customer-relationship-management-tool",
       category: "CRM & Vertrieb",
     },
     {
@@ -45,7 +45,7 @@ export function SolutionsSection() {
       description:
         "Die Dimetrics-Recruiting-Software automatisiert Bewerbungsprozesse, verbessert die Zusammenarbeit und schafft Transparenz – für schnellere Entscheidungen und effizientes Bewerbermanagement.",
       image: "/images/projects/recruiting-crm.png",
-      link: "https://dimetrics.io/dynamisches-recruiting-crm/",
+      link: "/solutions/dynamisches-recruiting-crm",
       category: "HR & Recruiting",
     },
     {
@@ -53,7 +53,7 @@ export function SolutionsSection() {
       description:
         "Wir entwickelten eine Plattform zur Optimierung der Lieferantenverwaltung, automatischen Gutschrifterstellung und Verbesserung der Buchhaltungsprozesse – für mehr Effizienz und Transparenz.",
       image: "/images/projects/lieferantenmanagement.png",
-      link: "https://dimetrics.io/lieferantenmanagement-in-der-energietechnik/",
+      link: "/solutions/lieferantenmanagement-in-der-energietechnik",
       category: "Supply Chain",
     },
     {
@@ -61,7 +61,7 @@ export function SolutionsSection() {
       description:
         "Dimetrics OCR digitalisiert Rechnungen, Lieferscheine und Aufträge – sogar handschriftliche. Die nahtlose Integration in Buchhaltungssysteme wie BMD spart Zeit, reduziert Kosten und steigert die Produktivität.",
       image: "/images/projects/dokumentenautomatisierung-ocr.png",
-      link: "https://dimetrics.io/dokumentenautomatisierung-mit-ocr/",
+      link: "/solutions/dokumentenautomatisierung-mit-ocr",
       category: "Dokumentenmanagement",
     },
   ];
