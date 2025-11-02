@@ -69,37 +69,37 @@ export function Navigation() {
             label: "Projektmanagement System",
             description:
               "Optimierte Arbeitsablaeufe, Echtzeit-Insights und Power BI fuer transparente Steuerung.",
-            href: "https://dimetrics.io/projektmanagement-system-inkl-power-bi/",
+            href: "/solutions/projektmanagement-system-inkl-power-bi",
           },
           {
             label: "WKO Cashback Aktion",
             description:
               "Digitale Verarbeitung von mehr als 15000 Einreichungen fuer effiziente Abwicklung.",
-            href: "https://dimetrics.io/wko-cashback-aktion/",
+            href: "/solutions/wko-cashback-aktion",
           },
           {
             label: "Customer Relationship Management",
             description:
               "CRM mit Exchange-Integration, Reporting und automatischer Interaktionserfassung.",
-            href: "https://dimetrics.io/customer-relationship-management-tool/",
+            href: "/solutions/customer-relationship-management-tool",
           },
           {
             label: "Dynamisches Recruiting CRM",
             description:
               "Automatisierte Bewerbungsprozesse, bessere Zusammenarbeit und hohe Transparenz.",
-            href: "https://dimetrics.io/dynamisches-recruiting-crm/",
+            href: "/solutions/dynamisches-recruiting-crm",
           },
           {
             label: "Lieferantenmanagement",
             description:
               "Plattform zur Optimierung von Lieferanten, Gutschriften und Buchhaltungsprozessen.",
-            href: "https://dimetrics.io/lieferantenmanagement-in-der-energietechnik/",
+            href: "/solutions/lieferantenmanagement-in-der-energietechnik",
           },
           {
             label: "Dokumentenautomatisierung mit OCR",
             description:
               "Digitalisiert Rechnungen und Lieferscheine und integriert nahtlos in Systeme wie BMD.",
-            href: "https://dimetrics.io/dokumentenautomatisierung-mit-ocr/",
+            href: "/solutions/dokumentenautomatisierung-mit-ocr",
           },
         ],
       },
