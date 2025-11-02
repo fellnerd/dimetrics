@@ -21,19 +21,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/services/enterprise-integration`,
+      url: `${baseUrl}/services/application-integration`,
       lastModified: currentDate,
       changeFrequency: "monthly",
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/services/business-insights`,
-      lastModified: currentDate,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/services/platform`,
+      url: `${baseUrl}/services/business-insights-integrations`,
       lastModified: currentDate,
       changeFrequency: "monthly",
       priority: 0.9,
@@ -60,20 +54,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.7,
     },
-    {
-      url: `${baseUrl}/karriere`,
-      lastModified: currentDate,
-      changeFrequency: "monthly",
-      priority: 0.6,
-    },
-
-    // Blog (wenn vorhanden)
-    {
-      url: `${baseUrl}/blog`,
-      lastModified: currentDate,
-      changeFrequency: "weekly",
-      priority: 0.7,
-    },
+    // Karriere/Blog placeholders removed until routes exist
 
     // Legal Pages - Lower Priority but Important
     {
@@ -109,14 +90,42 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
 
-    // Case Study URLs (External but important for reference)
-    // These are external links so we don't include them in sitemap
-    // but track for analytics:
-    // projektmanagement-system-inkl-power-bi
-    // wko-cashback-aktion
-    // customer-relationship-management-tool
-    // dynamisches-recruiting-crm
-    // lieferantenmanagement-in-der-energietechnik
-    // dokumentenautomatisierung-mit-ocr
+    // Solution Reports
+    {
+      url: `${baseUrl}/solutions/projektmanagement-system-inkl-power-bi`,
+      lastModified: currentDate,
+      changeFrequency: "monthly",
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/solutions/wko-cashback-aktion`,
+      lastModified: currentDate,
+      changeFrequency: "monthly",
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/solutions/customer-relationship-management-tool`,
+      lastModified: currentDate,
+      changeFrequency: "monthly",
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/solutions/dynamisches-recruiting-crm`,
+      lastModified: currentDate,
+      changeFrequency: "monthly",
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/solutions/lieferantenmanagement-in-der-energietechnik`,
+      lastModified: currentDate,
+      changeFrequency: "monthly",
+      priority: 0.75,
+    },
+    {
+      url: `${baseUrl}/solutions/dokumentenautomatisierung-mit-ocr`,
+      lastModified: currentDate,
+      changeFrequency: "monthly",
+      priority: 0.75,
+    },
   ];
 }

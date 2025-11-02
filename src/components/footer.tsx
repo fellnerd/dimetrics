@@ -12,11 +12,11 @@ export function Footer() {
     { name: "Cloud Strategie & Beratung", href: "/services/cloud-strategy" },
     {
       name: "Enterprise Integration",
-      href: "/services/enterprise-integration",
+      href: "/services/application-integration",
     },
     {
       name: "Business Insights & Analytics",
-      href: "/services/business-insights",
+      href: "/services/business-insights-integrations",
     },
     { name: "Dimetrics Platform", href: "/services/platform" },
   ];

@@ -81,6 +81,13 @@ Professional corporate website for dimetrics.io built with NextJS 15, TypeScript
 - Maintain the corporate, professional aesthetic throughout
 - Test on multiple devices for responsive behavior
 
+### 🎓 LESSONS LEARNED: Lösungsberichte konsistent erweitern
+
+1. **Struktur prüfen** – Vor dem Schreiben immer einen bestehenden Lösungsbericht öffnen und Aufbau/Komponenten exakt nachvollziehen.
+2. **Lösungsbericht erstellen** – Inhalte anhand der gelieferten Texte übernehmen und mit bestehenden Komponenten (HeroSectionSplit, Content, SolutionKPIGrid) aufbauen.
+3. **Navigation & Links aktualisieren** – Neue Seite in Solution Cards und Navigation (inkl. Mega-Menü) auf interne Pfade verlinken.
+4. **Sitemap pflegen** – Route in der Sitemap und weiteren Verlinkungen ergänzen.
+
 #### SCHRITT 2: Playwright-basierte Original-Analyse (MANDATORY)
 
 ```bash
