@@ -8,7 +8,7 @@ interface HeroBackgroundProps {
 }
 
 export function HeroBackgroundLight({
-  imageSrc = "/images/hero/bg-hero.png",
+  imageSrc = "/images/hero/bg-hero2.jpeg",
   imageAlt = "Business Solutions Overview",
 }: HeroBackgroundProps) {
   return (
@@ -19,7 +19,7 @@ export function HeroBackgroundLight({
         <Image
           src={imageSrc}
           alt={imageAlt}
-          width={1100}
+          width={900}
           height={715}
           className="relative max-w-none h-auto opacity-0 hover:opacity-95 transition-opacity duration-700 [&.loaded]:opacity-85"
           style={{

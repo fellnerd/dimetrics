@@ -32,7 +32,7 @@ export function ServicesSection({ title }: ServicesSectionProps) {
       fullTitle: "Enterprise Application Integration",
       description:
         "Mit unserer Enterprise Application Integration (EAI) schaffen wir eine harmonisierte Systemlandschaft, in der Ihre Anwendungen und Daten effizient miteinander kommunizieren. Wir bieten Ihnen Lösungen für effizientes API-Management, das eine reibungslose und moderne Schnittstellenkommunikation ermöglicht.",
-      backgroundImage: "/images/services/enterprise-integration-bg.png",
+      backgroundImage: "/images/services/enterprise-integration.jpeg",
       icon: "/images/services/enterprise-integration.png",
       href: "/services/application-integration",
     },
@@ -42,7 +42,7 @@ export function ServicesSection({ title }: ServicesSectionProps) {
       fullTitle: "Business Insights & Analytics",
       description:
         "Mit Dimetrics Business Insights verknüpfen und harmonisieren wir Daten aus unterschiedlichen Systemen, um eine zentrale Grundlage für datengetriebene Entscheidungen zu schaffen. Unsere Data Engineering-Expertise sorgt dafür, dass Sie komplexe Daten mit Power BI-Lösungen klar visualisieren können – inklusive direkt umsetzbarer Handlungsempfehlungen.",
-      backgroundImage: "/images/services/business-insights-bg.png",
+      backgroundImage: "/images/services/data-analytics.jpeg",
       icon: "/images/services/business-insights.png",
       href: "/services/business-insights-integrations",
     },
