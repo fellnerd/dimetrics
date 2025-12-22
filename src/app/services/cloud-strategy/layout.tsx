@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { PageLayout } from "@/components/page-layout";
 
 export const metadata: Metadata = {
   title: "AI Cloud Beratung | Cloud-Strategie & Migration | dimetrics.io",
@@ -39,5 +38,5 @@ export default function CloudStrategyLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <PageLayout>{children}</PageLayout>;
+  return <>{children}</>;
 }

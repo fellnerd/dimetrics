@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { PageLayout } from "@/components/page-layout";
 
 export const metadata: Metadata = {
   title: "Enterprise Application Integration | dimetrics.io",
@@ -39,5 +38,5 @@ export default function ApplicationIntegrationLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <PageLayout>{children}</PageLayout>;
+  return <>{children}</>;
 }

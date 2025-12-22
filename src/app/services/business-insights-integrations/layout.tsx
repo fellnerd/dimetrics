@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { PageLayout } from "@/components/page-layout";
 
 export const metadata: Metadata = {
   title: "Business Insights & Integrations | dimetrics.io",
@@ -39,5 +38,5 @@ export default function BusinessInsightsLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <PageLayout>{children}</PageLayout>;
+  return <>{children}</>;
 }
