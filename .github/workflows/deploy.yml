@@ -7,7 +7,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}
+  IMAGE_NAME: ${{ github.repository_owner }}/dimetrics_website
 
 jobs:
   build-and-push:
@@ -69,7 +69,7 @@ jobs:
             cat > compose.yaml <<EOF
             services:
               dimetrics:
-                image: ghcr.io/${{ github.repository }}:latest
+                image: ghcr.io/${{ github.repository_owner }}/dimetrics_website:latest
                 container_name: dimetrics-app
                 restart: always
                 environment:
