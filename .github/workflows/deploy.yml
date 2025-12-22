@@ -1,0 +1,86 @@
+name: Deploy to Plesk
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Log in to the Container registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Extract metadata (tags, labels) for Docker
+        id: meta
+        uses: docker/metadata-action@v5
+        with:
+          images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          tags: |
+            type=raw,value=latest
+            type=sha
+
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
+          labels: ${{ steps.meta.outputs.labels }}
+
+  deploy:
+    needs: build-and-push
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy to Plesk via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.PLESK_HOST }}
+          username: ${{ secrets.PLESK_USER }}
+          key: ${{ secrets.PLESK_SSH_KEY }}
+          script: |
+            # Login to GitHub Container Registry on the server
+            echo ${{ secrets.GITHUB_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+
+            # Navigate to app directory (create if not exists)
+            mkdir -p /var/www/vhosts/dimetrics-app
+            cd /var/www/vhosts/dimetrics-app
+
+            # Create/Update compose.prod.yaml content
+            # NOTE: We are using a simple heredoc here. 
+            # Ensure the image name matches what was built above (lowercase).
+            cat > compose.yaml <<EOF
+            services:
+              dimetrics:
+                image: ghcr.io/${{ github.repository }}:latest
+                container_name: dimetrics-app
+                restart: always
+                environment:
+                  NODE_ENV: production
+                ports:
+                  - "3000:3000"
+            EOF
+
+            # Pull new image and restart
+            docker compose pull
+            docker compose up -d --remove-orphans
+
+            # Cleanup unused images
+            docker image prune -f
