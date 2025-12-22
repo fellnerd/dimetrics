@@ -1,0 +1,10 @@
+services:
+  dimetrics:
+    # HINWEIS: Ersetze DEIN_GITHUB_USER durch deinen GitHub-Benutzernamen (kleingeschrieben)
+    image: ghcr.io/dein_github_user/dimetrics-homepage:latest
+    container_name: dimetrics-app
+    restart: always
+    environment:
+      NODE_ENV: production
+    ports:
+      - "3000:3000"
