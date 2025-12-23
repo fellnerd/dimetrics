@@ -45,7 +45,7 @@ const nextConfig: NextConfig = {
     ],
     // Auf Azure SWA kann die Image Optimization langsam sein (Cold Starts).
     // Falls Bilder nicht laden, unoptimized: true setzen.
-    unoptimized: true, 
+    unoptimized: true,
     formats: ["image/webp", "image/avif"],
     minimumCacheTTL: 31536000, // 1 Jahr Cache
     dangerouslyAllowSVG: true,
