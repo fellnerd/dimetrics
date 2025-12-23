@@ -173,6 +173,39 @@ Das Projekt enthält bereits VS Code Workspace-Settings mit aktiviertem Auto-App
 5. **Deployment**: Vercel/Netlify Setup
 6. **Analytics**: Google Analytics/Plausible Integration
 
+## 🚀 Deployment
+
+Das Deployment erfolgt automatisch via GitHub Actions auf unseren Plesk-Server.
+
+### Workflow: Server-Side Build
+
+Wir nutzen einen "Build on Server" Ansatz, um maximale Kompatibilität (insb. für ARM-Architektur) sicherzustellen.
+
+1.  **Push auf `main`**: Löst den Workflow aus.
+2.  **SSH Verbindung**: GitHub Actions verbindet sich mit dem Plesk-Server.
+3.  **Git Pull**: Der Server zieht sich den neuesten Code.
+4.  **Docker Build**: Das Image wird direkt auf dem Server gebaut (`--no-cache`).
+5.  **Restart**: Die Container werden neu gestartet.
+
+### Voraussetzungen (GitHub Secrets)
+
+Damit der Workflow funktioniert, müssen folgende Secrets im Repository hinterlegt sein:
+
+- `PLESK_HOST`: IP-Adresse des Servers
+- `PLESK_USER`: SSH-Benutzer (z.B. root)
+- `PLESK_SSH_KEY`: Privater SSH-Schlüssel für den Zugriff
+
+### Manuelles Deployment (Fallback)
+
+Falls nötig, kann das Deployment auch manuell auf dem Server angestoßen werden:
+
+```bash
+cd /var/www/vhosts/dimetrics-app
+git pull
+docker compose build --no-cache
+docker compose up -d
+```
+
 ## 🤝 Beitragen
 
 1. Fork das Repository
