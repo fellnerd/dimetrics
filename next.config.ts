@@ -4,8 +4,8 @@ const nextConfig: NextConfig = {
   // Performance-Optimierungen
   compress: true,
 
-  // Output für Plesk Deployment
-  output: "standalone",
+  // Output Konfiguration: Standalone nur für Docker/Plesk, sonst Standard (für Azure SWA)
+  output: process.env.BUILD_STANDALONE === "true" ? "standalone" : undefined,
 
   // Experimental Features für Performance
   experimental: {
@@ -43,7 +43,9 @@ const nextConfig: NextConfig = {
         hostname: "**",
       },
     ],
-    unoptimized: false,
+    // Auf Azure SWA kann die Image Optimization langsam sein (Cold Starts).
+    // Falls Bilder nicht laden, unoptimized: true setzen.
+    unoptimized: true, 
     formats: ["image/webp", "image/avif"],
     minimumCacheTTL: 31536000, // 1 Jahr Cache
     dangerouslyAllowSVG: true,
