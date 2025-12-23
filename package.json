@@ -2,11 +2,15 @@
   "name": "dimetrics",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=20.0.0"
+  },
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "build:plesk": "next build --no-lint",
-    "start": "NODE_ENV=production node app.js",
+    "start": "next start",
+    "start:custom": "NODE_ENV=production node app.js",
     "lint": "eslint",
     "plesk:build": "npm install && npm run build:plesk",
     "plesk:start": "NODE_ENV=production node app.js"
