@@ -9,7 +9,7 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "**",
+        hostname: "dimetrics.io", // 🛡️ SECURITY FIX: Wildcard entfernt
       },
     ],
     // Auf Azure SWA kann die Image Optimization langsam sein (Cold Starts).
@@ -17,7 +17,7 @@ const nextConfig: NextConfig = {
     unoptimized: true,
     formats: ["image/webp", "image/avif"],
     minimumCacheTTL: 31536000, // 1 Jahr Cache
-    dangerouslyAllowSVG: true,
+    dangerouslyAllowSVG: false, // 🛡️ SECURITY FIX: SVG deaktiviert
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
 

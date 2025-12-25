@@ -1,5 +1,16 @@
 import { NextRequest, NextResponse } from "next/server";
 
+// 🛡️ SECURITY FIX: Helper function for HTML escaping
+function escapeHtml(text: string): string {
+  if (!text) return "";
+  return text
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
 export async function POST(request: NextRequest) {
   try {
     const formData = await request.json();
@@ -16,6 +27,13 @@ export async function POST(request: NextRequest) {
         { status: 400 }
       );
     }
+
+    // 🛡️ SECURITY FIX: Inputs escapen
+    const cleanName = escapeHtml(`${formData.firstName} ${formData.lastName}`);
+    const cleanEmail = escapeHtml(formData.email);
+    const cleanPhone = formData.phone ? escapeHtml(formData.phone) : "";
+    const cleanCompany = formData.company ? escapeHtml(formData.company) : "";
+    const cleanMessage = escapeHtml(formData.message).replace(/\n/g, "<br>");
 
     // E-Mail-Template erstellen
     const emailHtml = `
@@ -44,33 +62,31 @@ export async function POST(request: NextRequest) {
           <div class="content">
             <div class="field">
               <div class="label">Name:</div>
-              <div class="value">${formData.firstName} ${
-      formData.lastName
-    }</div>
+              <div class="value">${cleanName}</div>
             </div>
             
             <div class="field">
               <div class="label">E-Mail:</div>
-              <div class="value">${formData.email}</div>
+              <div class="value">${cleanEmail}</div>
             </div>
             
             ${
-              formData.phone
+              cleanPhone
                 ? `
             <div class="field">
               <div class="label">Telefon:</div>
-              <div class="value">${formData.phone}</div>
+              <div class="value">${cleanPhone}</div>
             </div>
             `
                 : ""
             }
             
             ${
-              formData.company
+              cleanCompany
                 ? `
             <div class="field">
               <div class="label">Unternehmen:</div>
-              <div class="value">${formData.company}</div>
+              <div class="value">${cleanCompany}</div>
             </div>
             `
                 : ""
@@ -78,10 +94,7 @@ export async function POST(request: NextRequest) {
             
             <div class="field">
               <div class="label">Nachricht:</div>
-              <div class="value">${formData.message.replace(
-                /\n/g,
-                "<br>"
-              )}</div>
+              <div class="value">${cleanMessage}</div>
             </div>
             
             <div class="footer">
