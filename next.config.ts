@@ -22,6 +22,8 @@ const nextConfig: NextConfig = {
   },
 
   // Bundle-Optimierung
+  turbopack: {},
+
   webpack: (config, { isServer }) => {
     // Optimiere Bundle-Splitting
     if (!isServer) {
