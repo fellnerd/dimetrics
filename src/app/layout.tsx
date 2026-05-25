@@ -4,11 +4,11 @@ import "./globals.css";
 import StructuredData from "../components/structured-data";
 
 const shareImage = {
-  url: "/images/logos/dimetrics-logo.png",
-  width: 152,
-  height: 150,
-  alt: "dimetrics.io Logo",
-  type: "image/png",
+  url: "/images/hero/bg-hero2.jpeg",
+  width: 1200,
+  height: 630,
+  alt: "dimetrics.io - Digitale Transformation & Cloud-Beratung Österreich",
+  type: "image/jpeg",
 };
 
 const inter = Inter({
