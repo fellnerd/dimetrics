@@ -15,15 +15,16 @@ export default function StructuredData() {
     numberOfEmployees: "10-50",
     address: {
       "@type": "PostalAddress",
+      streetAddress: "Untermühlbach 2",
       addressCountry: "AT",
       addressRegion: "Kärnten",
-      addressLocality: "Klagenfurt",
-      postalCode: "9020",
+      addressLocality: "St. Veit an der Glan",
+      postalCode: "9300",
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: "46.6247",
-      longitude: "14.3051",
+      latitude: "46.7666",
+      longitude: "14.3640",
     },
     contactPoint: {
       "@type": "ContactPoint",
