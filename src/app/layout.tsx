@@ -171,9 +171,9 @@ export const metadata: Metadata = {
   },
   other: {
     "geo.region": "AT-2", // Kärnten, Austria
-    "geo.placename": "Klagenfurt, Kärnten, Austria",
-    "geo.position": "46.6247;14.3051", // Klagenfurt coordinates
-    ICBM: "46.6247, 14.3051",
+    "geo.placename": "St. Veit an der Glan, Kärnten, Austria",
+    "geo.position": "46.7666;14.3640", // St. Veit an der Glan coordinates
+    ICBM: "46.7666, 14.3640",
     "DC.title": "dimetrics.io - Digitale Transformation Österreich",
     "DC.creator": "dimetrics.io Team",
     "DC.subject":
