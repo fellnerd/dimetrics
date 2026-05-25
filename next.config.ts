@@ -9,15 +9,22 @@ const nextConfig: NextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "dimetrics.io", // 🛡️ SECURITY FIX: Wildcard entfernt
+        hostname: "dimetrics.io",
+      },
+      {
+        protocol: "https",
+        hostname: "sic.or.at",
+      },
+      {
+        protocol: "https",
+        hostname: "www.systempro.at",
       },
     ],
-    // Auf Azure SWA kann die Image Optimization langsam sein (Cold Starts).
-    // Falls Bilder nicht laden, unoptimized: true setzen.
-    unoptimized: true,
-    formats: ["image/webp", "image/avif"],
+    // Image optimization enabled (Plesk/Docker supports it natively)
+    // unoptimized was set for Azure SWA cold starts — not needed here
+    formats: ["image/avif", "image/webp"],
     minimumCacheTTL: 31536000, // 1 Jahr Cache
-    dangerouslyAllowSVG: false, // 🛡️ SECURITY FIX: SVG deaktiviert
+    dangerouslyAllowSVG: false,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
 
