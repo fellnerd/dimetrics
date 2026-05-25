@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://dimetrics.io/images/services/cloud-strategy.svg",
+        url: "https://dimetrics.io/images/services/cloud-strategy-bg.png",
         width: 1200,
         height: 630,
         alt: "AI Cloud Beratung Services",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     title: "AI Cloud Beratung | dimetrics.io",
     description:
       "Take the world by cloud - Professionelle Cloud-Strategien für österreichische Unternehmen.",
-    images: ["https://dimetrics.io/images/services/cloud-strategy.svg"],
+    images: ["https://dimetrics.io/images/services/cloud-strategy-bg.png"],
   },
   alternates: {
     canonical: "https://dimetrics.io/services/cloud-strategy",
