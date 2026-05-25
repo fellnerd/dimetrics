@@ -58,8 +58,8 @@ export default function DatenschutzPage() {
                 <Header.H2>Verantwortlicher</Header.H2>
                 <Typography.Body className="text-gray-700 leading-relaxed">
                   <strong>Daniel Fellner, MSc</strong><br />
-                  Untermühlbach 2<br />
-                  9300 St. Veit an der Glan<br /><br />
+                  Angererweg 8<br />
+                  9020 Klagenfurt am Wörthersee<br /><br />
                   E-Mail-Adresse: <a href="mailto:d.fellner@dimetrics.io" className="text-blue-600 hover:text-blue-800 transition-colors">d.fellner@dimetrics.io</a><br />
                   Impressum: <a href="https://dimetrics.at/impressum/" className="text-blue-600 hover:text-blue-800 transition-colors">https://dimetrics.at/impressum/</a>
                 </Typography.Body>
@@ -73,7 +73,7 @@ export default function DatenschutzPage() {
                 <Typography.Body className="text-gray-700 leading-relaxed">
                   Die nachfolgende Übersicht fasst die Arten der verarbeiteten Daten und die Zwecke ihrer Verarbeitung zusammen und verweist auf die betroffenen Personen.
                 </Typography.Body>
-                
+
                 <Header.H3 className="text-gray-900 mb-4 mt-6">Arten der verarbeiteten Daten</Header.H3>
                 <Typography.Body className="text-gray-700 leading-relaxed">
                   • Kontaktdaten.<br />
@@ -110,7 +110,7 @@ export default function DatenschutzPage() {
                   • <strong>Vertragserfüllung und vorvertragliche Anfragen (Art. 6 Abs. 1 S. 1 lit. b) DSGVO)</strong> – Die Verarbeitung ist für die Erfüllung eines Vertrags, dessen Vertragspartei die betroffene Person ist, oder zur Durchführung vorvertraglicher Maßnahmen erforderlich, die auf Anfrage der betroffenen Person erfolgen.<br />
                   • <strong>Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f) DSGVO)</strong> – die Verarbeitung ist zur Wahrung der berechtigten Interessen des Verantwortlichen oder eines Dritten notwendig, vorausgesetzt, dass die Interessen, Grundrechte und Grundfreiheiten der betroffenen Person, die den Schutz personenbezogener Daten verlangen, nicht überwiegen.
                 </Typography.Body>
-                
+
                 <Typography.Body className="text-gray-700 leading-relaxed mt-4">
                   <strong>Nationale Datenschutzregelungen in Österreich:</strong> Zusätzlich zu den Datenschutzregelungen der DSGVO gelten nationale Regelungen zum Datenschutz in Österreich. Hierzu gehört insbesondere das Bundesgesetz zum Schutz natürlicher Personen bei der Verarbeitung personenbezogener Daten (Datenschutzgesetz – DSG). Das Datenschutzgesetz enthält insbesondere Spezialregelungen zum Recht auf Auskunft, zum Recht auf Richtigstellung oder Löschung, zur Verarbeitung besonderer Kategorien personenbezogener Daten, zur Verarbeitung für andere Zwecke und zur Übermittlung sowie zur automatisierten Entscheidungsfindung im Einzelfall.
                 </Typography.Body>
@@ -163,7 +163,7 @@ export default function DatenschutzPage() {
                   • <strong>Zwecke der Verarbeitung:</strong> Kontaktanfragen und Kommunikation; Verwaltung und Beantwortung von Anfragen; Feedback (z. B. Sammeln von Feedback via Online-Formular). Bereitstellung unseres Onlineangebotes und Nutzerfreundlichkeit.<br />
                   • <strong>Rechtsgrundlagen:</strong> Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f) DSGVO). Vertragserfüllung und vorvertragliche Anfragen (Art. 6 Abs. 1 S. 1 lit. b) DSGVO).
                 </Typography.Body>
-                
+
                 <Header.H3 className="text-gray-900 mb-4 mt-6">Weitere Hinweise zu Verarbeitungsprozessen, Verfahren und Diensten:</Header.H3>
                 <Typography.Body className="text-gray-700 leading-relaxed">
                   • <strong>Kontaktformular:</strong> Wenn Nutzer über unser Kontaktformular, E-Mail oder andere Kommunikationswege mit uns in Kontakt treten, verarbeiten wir die uns in diesem Zusammenhang mitgeteilten Daten zur Bearbeitung des mitgeteilten Anliegens; Rechtsgrundlagen: Vertragserfüllung und vorvertragliche Anfragen (Art. 6 Abs. 1 S. 1 lit. b) DSGVO), Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f) DSGVO).
@@ -181,7 +181,7 @@ export default function DatenschutzPage() {
                 <Typography.Body className="text-gray-700 leading-relaxed mt-4">
                   Wir weisen darauf hin, dass dabei Nutzerdaten außerhalb des Raumes der Europäischen Union verarbeitet werden können. Hierdurch können sich für die Nutzer Risiken ergeben, weil so zum Beispiel die Durchsetzung der Nutzerrechte erschwert werden könnte.
                 </Typography.Body>
-                
+
                 <Typography.Body className="text-gray-700 leading-relaxed mt-4">
                   • <strong>Verarbeitete Datenarten:</strong> Kontaktdaten (z. B. Post- und E-Mail-Adressen oder Telefonnummern); Inhaltsdaten (z. B. textliche oder bildliche Nachrichten und Beiträge sowie die sie betreffenden Informationen, wie z. B. Angaben zur Autorenschaft oder Zeitpunkt der Erstellung); Nutzungsdaten (z. B. Seitenaufrufe und Verweildauer, Klickpfade, Nutzungsintensität und -frequenz, verwendete Gerätetypen und Betriebssysteme, Interaktionen mit Inhalten und Funktionen). Meta-, Kommunikations- und Verfahrensdaten (z. B. IP-Adressen, Zeitangaben, Identifikationsnummern, beteiligte Personen).<br />
                   • <strong>Betroffene Personen:</strong> Nutzer (z. B. Webseitenbesucher, Nutzer von Onlinediensten).<br />
@@ -203,7 +203,7 @@ export default function DatenschutzPage() {
                 <Typography.Body className="text-gray-700 leading-relaxed">
                   Wir binden Funktions- und Inhaltselemente in unser Onlineangebot ein, die von den Servern ihrer jeweiligen Anbieter (nachfolgend als „Drittanbieter" bezeichnet) bezogen werden. Dabei kann es sich zum Beispiel um Grafiken, Videos oder Stadtpläne handeln (nachfolgend einheitlich als „Inhalte" bezeichnet).
                 </Typography.Body>
-                
+
                 <Header.H3 className="text-gray-900 mb-4 mt-6">Weitere Hinweise zu Verarbeitungsprozessen, Verfahren und Diensten:</Header.H3>
                 <Typography.Body className="text-gray-700 leading-relaxed">
                   • <strong>Google Fonts (Bezug vom Google Server):</strong> Bezug von Schriften (und Symbolen) zum Zwecke einer technisch sicheren, wartungsfreien und effizienten Nutzung von Schriften und Symbolen im Hinblick auf Aktualität und Ladezeiten, deren einheitliche Darstellung und Berücksichtigung möglicher lizenzrechtlicher Beschränkungen. Dem Anbieter der Schriftarten wird die IP-Adresse des Nutzers mitgeteilt, damit die Schriftarten im Browser des Nutzers zur Verfügung gestellt werden können. Darüber hinaus werden technische Daten (Spracheinstellungen, Bildschirmauflösung, Betriebssystem, verwendete Hardware) übermittelt, die für die Bereitstellung der Schriften in Abhängigkeit von den verwendeten Geräten und der technischen Umgebung notwendig sind. Diese Daten können auf einem Server des Anbieters der Schriftarten in den USA verarbeitet werden – Beim Besuch unseres Onlineangebotes senden die Browser der Nutzer ihre Browser HTTP-Anfragen an die Google Fonts Web API (d. h. eine Softwareschnittstelle für den Abruf der Schriftarten). Die Google Fonts Web API stellt den Nutzern die Cascading Style Sheets (CSS) von Google Fonts und danach die in der CCS angegebenen Schriftarten zur Verfügung. Zu diesen HTTP-Anfragen gehören (1) die vom jeweiligen Nutzer für den Zugriff auf das Internet verwendete IP-Adresse, (2) die angeforderte URL auf dem Google-Server und (3) die HTTP-Header, einschließlich des User-Agents, der die Browser- und Betriebssystemversionen der Websitebesucher beschreibt, sowie die Verweis-URL (d. h. die Webseite, auf der die Google-Schriftart angezeigt werden soll). IP-Adressen werden weder auf Google-Servern protokolliert noch gespeichert und sie werden nicht analysiert. Die Google Fonts Web API protokolliert Details der HTTP-Anfragen (angeforderte URL, User-Agent und Verweis-URL). Der Zugriff auf diese Daten ist eingeschränkt und streng kontrolliert.; Dienstanbieter: Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland; Rechtsgrundlagen: Berechtigte Interessen (Art. 6 Abs. 1 S. 1 lit. f) DSGVO)); Website: <a href="https://fonts.google.com/" className="text-blue-600 hover:text-blue-800 transition-colors">https://fonts.google.com/</a>; Datenschutzerklärung: <a href="https://policies.google.com/privacy" className="text-blue-600 hover:text-blue-800 transition-colors">https://policies.google.com/privacy</a>; Grundlage Drittlandtransfers: Data Privacy Framework (DPF). Weitere Informationen: <a href="https://developers.google.com/fonts/faq/privacy?hl=de" className="text-blue-600 hover:text-blue-800 transition-colors">https://developers.google.com/fonts/faq/privacy?hl=de</a>.
