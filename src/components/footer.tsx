@@ -135,6 +135,8 @@ export function Footer() {
                         <img
                           src="https://sic.or.at/wp-content/uploads/2018/05/sic_logo2018.png"
                           alt="SIC"
+                          width={120}
+                          height={24}
                           className="h-6 w-auto brightness-0 invert opacity-60 hover:opacity-100 transition-opacity"
                         />
                       </a>
@@ -161,6 +163,8 @@ export function Footer() {
                         <img
                           src="https://www.systempro.at/wp-content/uploads/2017/02/logo.png?_t=1488061157"
                           alt="Systempro"
+                          width={120}
+                          height={24}
                           className="h-6 w-auto brightness-0 invert opacity-60 hover:opacity-100 transition-opacity"
                         />
                       </a>
