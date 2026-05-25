@@ -147,7 +147,8 @@ export default function ContactPage() {
                     Standort
                   </Typography.SectionTitle>
                   <div className="text-xl font-bold text-gray-900">
-                    <div>9300 St. Veit an der Glan</div>
+                    <div>Angererweg 8</div>
+                    <div>9020 Klagenfurt am Wörthersee</div>
                     <div className="text-lg text-gray-600">Österreich</div>
                   </div>
                 </div>
