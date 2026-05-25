@@ -210,7 +210,7 @@ export default function AGBPage() {
                   <strong>11.1</strong> Es gilt österreichisches Recht unter Ausschluss des UN-Kaufrechts.
                 </Typography.Body>
                 <Typography.Body className="text-gray-700 leading-relaxed mt-4">
-                  <strong>11.2</strong> Erfüllungsort und Gerichtsstand ist St. Veit an der Glan, Österreich.
+                  <strong>11.2</strong> Erfüllungsort und Gerichtsstand ist Klagenfurt am Wörthersee, Österreich.
                 </Typography.Body>
                 <Typography.Body className="text-gray-700 leading-relaxed mt-4">
                   <strong>11.3</strong> Sollten einzelne Bestimmungen unwirksam sein, bleibt die Wirksamkeit des übrigen Vertrages unberührt.
@@ -230,8 +230,8 @@ export default function AGBPage() {
                 </Typography.Body>
                 <Typography.Body className="text-gray-700 leading-relaxed mt-4">
                   <strong>Dimetrics - Daniel Fellner</strong><br />
-                  Untermühlbach 2<br />
-                  9300 St. Veit an der Glan<br />
+                  Angererweg 8<br />
+                  9020 Klagenfurt am Wörthersee<br />
                   Österreich<br /><br />
                   E-Mail: <a href="mailto:office@dimetrics.io" className="text-blue-600 hover:text-blue-800 transition-colors">office@dimetrics.io</a><br />
                   Telefon: <a href="tel:+436641969013" className="text-blue-600 hover:text-blue-800 transition-colors">+43 (0)6641969013</a>
