@@ -27,7 +27,7 @@ export default function StructuredData() {
     },
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: "+43-xxx-xxx-xxx",
+      telephone: "+436641969013",
       contactType: "Business",
       availableLanguage: ["German", "English"],
       areaServed: "AT",
@@ -79,12 +79,6 @@ export default function StructuredData() {
         serviceType: "System Integration",
       },
     ],
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.9",
-      reviewCount: "47",
-      bestRating: "5",
-    },
     hasCredential: [
       {
         "@type": "EducationalOccupationalCredential",
@@ -109,14 +103,6 @@ export default function StructuredData() {
       "@id": "https://dimetrics.io/#organization",
     },
     inLanguage: "de-AT",
-    potentialAction: {
-      "@type": "SearchAction",
-      target: {
-        "@type": "EntryPoint",
-        urlTemplate: "https://dimetrics.io/search?q={search_term_string}",
-      },
-      "query-input": "required name=search_term_string",
-    },
   };
 
   const serviceAreaSchema = {
