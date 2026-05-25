@@ -43,7 +43,7 @@ export default function CookiesPage() {
             <div className="bg-green-50 border border-green-200 rounded-lg p-6">
               <Header.H3 className="text-green-900 mb-4">Cookie-freundliche Website</Header.H3>
               <Typography.Body className="text-green-800">
-                <strong>Gute Nachricht:</strong> Diese Website verwendet <span className="font-semibold">keine Tracking-Cookies</span> und benötigt daher <span className="font-semibold">kein Cookie-Banner</span>. 
+                <strong>Gute Nachricht:</strong> Diese Website verwendet <span className="font-semibold">keine Tracking-Cookies</span> und benötigt daher <span className="font-semibold">kein Cookie-Banner</span>.
                 Wir respektieren Ihre Privatsphäre und verzichten bewusst auf Tracking-Tools.
               </Typography.Body>
             </div>
@@ -53,7 +53,7 @@ export default function CookiesPage() {
               <Content.Column>
                 <Header.H2>Was sind Cookies?</Header.H2>
                 <Typography.Body className="text-gray-700 leading-relaxed">
-                  Cookies sind kleine Textdateien, die von Websites auf Ihrem Gerät gespeichert werden. 
+                  Cookies sind kleine Textdateien, die von Websites auf Ihrem Gerät gespeichert werden.
                   Sie dienen verschiedenen Zwecken, von der Bereitstellung grundlegender Funktionen bis hin zur Analyse des Nutzerverhaltens.
                 </Typography.Body>
                 <Typography.Body className="text-gray-700 leading-relaxed mt-4">
@@ -69,7 +69,7 @@ export default function CookiesPage() {
             <Content.Row cols={1}>
               <Content.Column>
                 <Header.H2>Cookies auf unserer Website</Header.H2>
-                
+
                 {/* Technische Cookies */}
                 <div className="bg-white border border-gray-200 rounded-lg p-6 mb-6">
                   <Header.H3 className="text-gray-900 mb-4">Technische Cookies (Notwendig)</Header.H3>
@@ -109,15 +109,15 @@ export default function CookiesPage() {
               <Content.Column>
                 <Header.H2>Unser Datenschutz-Ansatz</Header.H2>
                 <Typography.Body className="text-gray-700 leading-relaxed">
-                  <strong>Privacy by Design:</strong> Wir haben uns bewusst dafür entschieden, auf Tracking und Überwachung zu verzichten. 
+                  <strong>Privacy by Design:</strong> Wir haben uns bewusst dafür entschieden, auf Tracking und Überwachung zu verzichten.
                   Ihre Privatsphäre ist uns wichtiger als detaillierte Nutzeranalysen.
                 </Typography.Body>
                 <Typography.Body className="text-gray-700 leading-relaxed mt-4">
-                  <strong>DSGVO-konform ohne Einwilligung:</strong> Da wir nur technisch notwendige Cookies verwenden, 
+                  <strong>DSGVO-konform ohne Einwilligung:</strong> Da wir nur technisch notwendige Cookies verwenden,
                   benötigen wir keine Einwilligung und müssen kein störendes Cookie-Banner anzeigen.
                 </Typography.Body>
                 <Typography.Body className="text-gray-700 leading-relaxed mt-4">
-                  <strong>Transparenz:</strong> Diese Seite erklärt vollständig, welche Daten wir sammeln (praktisch keine) 
+                  <strong>Transparenz:</strong> Diese Seite erklärt vollständig, welche Daten wir sammeln (praktisch keine)
                   und wie wir sie verwenden (ausschließlich für Website-Funktionen).
                 </Typography.Body>
               </Content.Column>
@@ -149,11 +149,11 @@ export default function CookiesPage() {
                   Diese Cookie-Richtlinie wurde zuletzt am <strong>12. Oktober 2025</strong> aktualisiert.
                 </Typography.Body>
                 <Typography.Body className="text-gray-700 leading-relaxed mt-4">
-                  Sollten wir in Zukunft zusätzliche Cookies verwenden, werden wir diese Seite entsprechend aktualisieren 
+                  Sollten wir in Zukunft zusätzliche Cookies verwenden, werden wir diese Seite entsprechend aktualisieren
                   und Sie über wesentliche Änderungen informieren.
                 </Typography.Body>
                 <Typography.Body className="text-gray-700 leading-relaxed mt-4">
-                  <strong>Unser Versprechen:</strong> Wir werden Sie vor der Einführung von Tracking-Cookies informieren 
+                  <strong>Unser Versprechen:</strong> Wir werden Sie vor der Einführung von Tracking-Cookies informieren
                   und Ihre Einwilligung einholen, falls dies rechtlich erforderlich ist.
                 </Typography.Body>
               </Content.Column>
@@ -168,8 +168,8 @@ export default function CookiesPage() {
                 </Typography.Body>
                 <Typography.Body className="text-gray-700 leading-relaxed mt-4">
                   <strong>Dimetrics - Daniel Fellner</strong><br />
-                  Untermühlbach 2<br />
-                  9300 St. Veit an der Glan<br />
+                  Angererweg 8<br />
+                  9020 Klagenfurt am Wörthersee<br />
                   Österreich<br /><br />
                   E-Mail: <a href="mailto:office@dimetrics.io" className="text-blue-600 hover:text-blue-800 transition-colors">office@dimetrics.io</a><br />
                   Telefon: <a href="tel:+436641969013" className="text-blue-600 hover:text-blue-800 transition-colors">+43 (0)6641969013</a>
