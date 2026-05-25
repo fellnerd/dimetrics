@@ -44,12 +44,12 @@ export default function ImpressumPage() {
                 <Typography.Body className="text-gray-700 leading-relaxed">
                   <strong>Daniel Fellner</strong>
                   <br />
-                  Anschrift: Untermühlbach 2, 9300 St. Veit an der Glan
+                  Anschrift: Angererweg 8, 9020 Klagenfurt am Wörthersee
                   <br />
                   <strong>UID-Nr:</strong> ATU80281035
                   <br />
                   <strong>Gewerbeaufsichtbehörde:</strong>{" "}
-                  Bezirkshauptmannschaft St. Veit an der Glan
+                  Magistrat Klagenfurt
                   <br />
                   <strong>Mitgliedschaften:</strong> Mitglied der WKO
                 </Typography.Body>
